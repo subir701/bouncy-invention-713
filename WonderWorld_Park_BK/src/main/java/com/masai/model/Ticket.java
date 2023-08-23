@@ -16,6 +16,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.validation.constraints.DecimalMin;
+import jakarta.validation.constraints.Min;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -39,7 +40,9 @@ public class Ticket {
 	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name = "activityId")
 	private Activity activity;
-	private LocalDate visitDate;
+	
+	@CreationTimestamp
+	private LocalDateTime visitDateAndTime;
 	
 	@DecimalMin("0")
 	private Double price;
@@ -55,6 +58,8 @@ public class Ticket {
 	@Column(nullable = false)
 	private Boolean isExpired;
 	
+	
+	@Min(1)
 	private Integer personCount;
 
 }

@@ -52,7 +52,6 @@ public class AbstractUser {
 	private Boolean isDeleted;	
 	
 	
-	@Future
 	@Column(nullable = true)
 	private LocalDateTime deletionTime;
 	
