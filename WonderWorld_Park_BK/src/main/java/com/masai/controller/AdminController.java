@@ -24,7 +24,7 @@ import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/admin")
+@RequestMapping("/wonderWorld/admin")
 public class AdminController {
 
 	@Autowired
