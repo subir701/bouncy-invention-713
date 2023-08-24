@@ -19,7 +19,9 @@ import com.masai.repository.CustomerRepository;
 
 
 @RestController
-@RequestMapping("/ticket")
+
+@RequestMapping("/wonderWorld/tickets")
+
 public class TicketController {
 
 	

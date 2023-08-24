@@ -49,7 +49,7 @@ public class AbstractUser {
 	
 	
 	@Column(nullable = false)
-	private Boolean isDeleted;	
+	private Boolean isDeleted=false;	
 	
 	
 	@Column(nullable = true)
