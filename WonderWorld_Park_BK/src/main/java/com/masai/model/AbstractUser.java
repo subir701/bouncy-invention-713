@@ -11,7 +11,7 @@ import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.MappedSuperclass;
 import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.Future;
+
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 

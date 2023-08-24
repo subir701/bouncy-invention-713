@@ -32,7 +32,7 @@ public class AdminServiceImpl implements AdminService {
 
 	@Override
 	public Admin insertAdmin(Admin admin) throws AdminException{
-
+		
 		log.debug("Calling findByEmail method from AdminJpa Repository");
 
 		Optional<Admin> a=adminRepo.findByEmail(admin.getEmail());
