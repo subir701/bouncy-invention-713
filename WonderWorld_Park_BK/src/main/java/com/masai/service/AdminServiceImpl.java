@@ -35,13 +35,13 @@ public class AdminServiceImpl implements AdminService {
 
 	@Override
 	public Admin insertAdmin(Admin admin) throws AdminException{
-		log.debug("Calling findByAdminEmail method from AdminJpa Repository");
+		log.debug("Calling findByEmail method from AdminJpa Repository");
 		Optional<Admin> a=adminRepo.findByEmail(admin.getEmail());
 		if(a.isPresent()) {
 			throw new AdminException("Email id is already present");
 		}
 		
-//		log.debug("Calling findByAdminUsername method from AdminJpa Repository");
+//		log.debug("Calling findByUsername method from AdminJpa Repository");
 //		Optional<Admin> au=adminRepo.findByUsername(admin.getUsername());
 //		if(au.isPresent()) {
 //			throw new AdminException("Username is already present");
