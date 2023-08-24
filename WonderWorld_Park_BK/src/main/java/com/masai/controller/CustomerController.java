@@ -3,6 +3,7 @@ package com.masai.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,15 +18,22 @@ import com.masai.service.CustomerService;
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
 
 @RestController
-@RequestMapping("/wonderWorld/customers")
+@RequestMapping("/customers")
 public class CustomerController {
 
 	@Autowired
 	private CustomerService customerService;
 	
-	@PostMapping("/register")
-	public ResponseEntity<Customer> registerCustomer(@RequestBody Customer customer)throws CustomerException{
-		return new ResponseEntity<Customer>(customerService.registerCustomer(customer),HttpStatus.CREATED);
+    @Autowired
+	private PasswordEncoder  passwordEncoder;
+    
+	
+	
+	@PostMapping("/registerCustomer")
+	private ResponseEntity<Customer> registerCustomer(@RequestBody Customer customer)throws CustomerException{
+		customer.setPassword(passwordEncoder.encode(customer.getPassword()));
+		Customer c = customerService.registerCustomer(customer);
+		return new ResponseEntity<Customer>(c, HttpStatus.CREATED);	
 	}
 	
 	@PutMapping("/update/{customerId}")

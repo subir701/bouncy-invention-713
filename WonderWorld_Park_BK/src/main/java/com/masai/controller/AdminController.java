@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,7 +25,7 @@ import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/wonderWorld/admin")
+@RequestMapping("/admin")
 public class AdminController {
 
 	@Autowired
@@ -33,9 +34,15 @@ public class AdminController {
 	@Autowired
 	private CustomerService customerService;
 	
-	@PostMapping("/register")
-	public ResponseEntity<Admin> registerAdmin(@Valid @RequestBody Admin admin)throws AdminException{
-		return new ResponseEntity<Admin>(adminService.insertAdmin(admin),HttpStatus.CREATED);
+	@Autowired
+	private PasswordEncoder passwordEncoder;
+	
+	
+	@PostMapping("/registerAdmin")
+	public ResponseEntity<Admin> createAdmin(@RequestBody Admin admin) throws AdminException{
+		admin.setPassword(passwordEncoder.encode(admin.getPassword()));
+		Admin ad = adminService.insertAdmin(admin);
+		return new ResponseEntity<Admin>(ad, HttpStatus.CREATED);
 	}
 	
 	@PutMapping("/delete/{adminId}")
