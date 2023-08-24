@@ -1,3 +1,4 @@
+
 package com.masai.service;
 
 import java.time.LocalDateTime;
@@ -31,18 +32,21 @@ public class AdminServiceImpl implements AdminService {
 
 	@Override
 	public Admin insertAdmin(Admin admin) throws AdminException{
-		log.debug("Calling findByAdminEmail method from AdminJpa Repository");
+
+		log.debug("Calling findByEmail method from AdminJpa Repository");
+
 		Optional<Admin> a=adminRepo.findByEmail(admin.getEmail());
 		if(a.isPresent()) {
 			throw new AdminException("Email id is already present");
 		}
 		
-//		log.debug("Calling findByAdminUsername method from AdminJpa Repository");
-//		Optional<Admin> au=adminRepo.findByAdminUsername(admin.getUsername());
+//		log.debug("Calling findByUsername method from AdminJpa Repository");
+//		Optional<Admin> au=adminRepo.findByUsername(admin.getUsername());
 //		if(au.isPresent()) {
 //			throw new AdminException("Username is already present");
+
 //		}
-		
+
 		log.debug("Calling save method from AdminJpa Repository");
 		
 		admin.setRole(Role.ADMIN);
@@ -51,8 +55,8 @@ public class AdminServiceImpl implements AdminService {
 		Admin main=adminRepo.save(admin);
 		
 		log.info("Admin saved sucessfully");
-		return main;
-	}
+    return main;
+  }
 
 	
 
@@ -69,7 +73,5 @@ public class AdminServiceImpl implements AdminService {
 		log.info("Admin is deleted sucessfully");
 		return admin;
 	}
-
 	
-
 }

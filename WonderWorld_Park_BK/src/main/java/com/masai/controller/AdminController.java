@@ -1,3 +1,4 @@
+
 package com.masai.controller;
 
 import java.util.List;
@@ -52,3 +53,4 @@ public class AdminController {
 		return new ResponseEntity<Customer>(customerService.viewCustomerById(customerId),HttpStatus.FOUND);
 	}
 }
+
