@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/activities")
+@RequestMapping("/wonderWorld/activities")
 public class ActivityController {
 
 }
