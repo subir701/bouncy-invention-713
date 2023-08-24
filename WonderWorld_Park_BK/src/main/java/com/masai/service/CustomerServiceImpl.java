@@ -24,7 +24,7 @@ public class CustomerServiceImpl implements CustomerService{
 	@Override
 	public Customer registerCustomer(Customer customer) throws CustomerException {
 		log.debug("Calling findByEmail method from CustomerJpa Repository");
-		Optional<Customer> c=customerRepo.findByCustomerEmail(customer.getEmail());
+		Optional<Customer> c=customerRepo.findByEmail(customer.getEmail());
 		if(c.isPresent())throw new CustomerException("Email is already present");
 		log.debug("Calling save method from CustomerJpa Repository");
 		customer.setRole(Role.USER);
