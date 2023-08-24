@@ -38,6 +38,8 @@ public class Activity {
 	
 	private Double price;
 	
+	private String url;
+	
 	private Integer personCapacity;
 	
 	@CreationTimestamp
