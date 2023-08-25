@@ -24,8 +24,15 @@ import com.masai.service.AdminService;
 import com.masai.service.CustomerService;
 
 
+
+import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
+
+
 @RestController
-@RequestMapping("/admin")
+@RequestMapping("/wonderWorld/admin")
+
+
 public class AdminController {
 
 	@Autowired
@@ -34,12 +41,13 @@ public class AdminController {
 	@Autowired
 	private CustomerService customerService;
 	
+
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 	
 	
 	@PostMapping("/registerAdmin")
-	public ResponseEntity<Admin> createAdmin(@RequestBody Admin admin) throws AdminException{
+	public ResponseEntity<Admin> createAdmin(@Valid @RequestBody Admin admin) throws AdminException{
 		admin.setPassword(passwordEncoder.encode(admin.getPassword()));
 		Admin ad = adminService.insertAdmin(admin);
 		return new ResponseEntity<Admin>(ad, HttpStatus.CREATED);

@@ -15,7 +15,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
 @Entity
 public class Admin  extends AbstractUser{
@@ -24,6 +23,10 @@ public class Admin  extends AbstractUser{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer adminId;
 	
+
 	@JsonIgnore
 	private String role = "ADMIN";
+
+	
+
 }

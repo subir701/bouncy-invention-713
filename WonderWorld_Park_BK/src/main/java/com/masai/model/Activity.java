@@ -38,7 +38,13 @@ public class Activity {
 	
 	private Double price;
 	
+	private String url;
+	
+	
+	
 	private Integer personCapacity;
+	
+	private Integer distance;
 	
 	@CreationTimestamp
 	@Column(updatable = false)
