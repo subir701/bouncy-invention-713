@@ -29,44 +29,54 @@ public class JwtTokenGeneratorFilter extends OncePerRequestFilter {
 	@Override
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
 			throws ServletException, IOException {
-		
-		Authentication authentication = SecurityContextHolder.getContext().getAuthentication() ;
-		System.out.println();
-		if(authentication != null) {
-			SecretKey key = Keys.hmacShaKeyFor(SecurityConstants.JWT_KEY.getBytes()) ;
-			String jwt = Jwts.builder()
-					.setIssuer("Akash")
-					.setSubject("JWT_Token")
-					.claim("username", authentication.getName()) 
-					.claim("authorities", getValue(authentication.getAuthorities())) 
-					.setIssuedAt(new Date())
-					.setExpiration(new Date( new Date().getTime()+20000000))
-					.signWith(key).compact() ;
-			response.setHeader(SecurityConstants.JWT_HEADER, jwt);
-		}
-		else {
-			System.out.println("something went wrong");
-		}
-		
-		filterChain.doFilter(request, response);
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (null != authentication) {
+            SecretKey key = Keys.hmacShaKeyFor(SecurityConstants.JWT_KEY.getBytes());
+            
+            String jwt = Jwts.builder()
+            		.setIssuer("Akash")
+            		.setSubject("JWT Token")
+                    .claim("username", authentication.getName())
+                    .claim("authorities", populateAuthorities(authentication.getAuthorities()))
+                    .setIssuedAt(new Date())
+                    .setExpiration(new Date(new Date().getTime()+ 30000000)) // millisecond expiration time of around 8 hours
+                    .signWith(key).compact();
+                       
+            response.setHeader(SecurityConstants.JWT_HEADER, jwt);
+ 
+        }
+
+        filterChain.doFilter(request, response);	
 	}
 	
+    private String populateAuthorities(Collection<? extends GrantedAuthority> collection) {
+        
+    	Set<String> authoritiesSet = new HashSet<>();
+        
+        for (GrantedAuthority authority : collection) {
+            authoritiesSet.add(authority.getAuthority());
+        }
+        return String.join(",", authoritiesSet);
+   
+    
+    }
 	
-	public String getValue(Collection<? extends GrantedAuthority> collection) {
-		Set<String> set = new HashSet<>() ;
-		for(GrantedAuthority autho : collection) {
-			set.add(autho.getAuthority()) ;
-		}
-		
-		return String.join(",", set) ;
-	}
+	
+//	public String getValue(Collection<? extends GrantedAuthority> collection) {
+//		Set<String> set = new HashSet<>() ;
+//		for(GrantedAuthority autho : collection) {
+//			set.add(autho.getAuthority()) ;
+//		}
+//		
+//		return String.join(",", set) ;
+//	}
 	
 	@Override
 	protected boolean shouldNotFilter(HttpServletRequest request) {
 	    String servletPath = request.getServletPath();
 	    return !(
-	        servletPath.equals("/customer/login") ||
-	        servletPath.equals("/admin/login") 
+	        servletPath.equals("/customers/signin") ||
+	        servletPath.equals("/admin/signin") 
 	    );
 	}
 	

@@ -2,18 +2,14 @@
 package com.masai.service;
 
 import java.time.LocalDateTime;
-
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
 import com.masai.Exception.AdminException;
-
 import com.masai.model.Admin;
 import com.masai.model.Role;
-
 import com.masai.repository.AdminRepository;
 
 import lombok.extern.slf4j.Slf4j;
@@ -23,12 +19,7 @@ import lombok.extern.slf4j.Slf4j;
 public class AdminServiceImpl implements AdminService {
 	@Autowired
 	private AdminRepository adminRepo;
-	
-	
-	
-	
-	
-	
+		
 
 	@Override
 	public Admin insertAdmin(Admin admin) throws AdminException{
@@ -49,7 +40,7 @@ public class AdminServiceImpl implements AdminService {
 
 		log.debug("Calling save method from AdminJpa Repository");
 		
-		admin.setRole(Role.ADMIN);
+//		admin.setRole(Role.ADMIN);
 		
 		admin.setCreatedOn(LocalDateTime.now());
 		Admin main=adminRepo.save(admin);
@@ -72,6 +63,13 @@ public class AdminServiceImpl implements AdminService {
 		admin.setDeletionTime(LocalDateTime.now());
 		log.info("Admin is deleted sucessfully");
 		return admin;
+	}
+	
+	@Override
+	public Optional<Admin> findByEmail(String email) throws AdminException{
+		Optional<Admin> user= adminRepo.findByEmail(email);
+		 if(user.isEmpty()) throw new AdminException("No admin found");
+		 return user;
 	}
 	
 }

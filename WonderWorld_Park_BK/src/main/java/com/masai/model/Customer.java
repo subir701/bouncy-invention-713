@@ -28,7 +28,11 @@ public class Customer  extends AbstractUser {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer customerId;
+
 	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "customer")
 	private List<Ticket> tickets = new ArrayList<>();
+	
+	@JsonIgnore
+	private String role = "USER";
 }

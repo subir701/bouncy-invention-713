@@ -25,8 +25,10 @@ import com.masai.service.AdminService;
 import com.masai.service.CustomerService;
 
 
+
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
+
 
 @RestController
 @RequestMapping("/wonderWorld/admin")
@@ -51,6 +53,12 @@ public class AdminController {
 		Admin ad = adminService.insertAdmin(admin);
 		return new ResponseEntity<Admin>(ad, HttpStatus.CREATED);
 	}
+	
+	@GetMapping("/signin")
+	public ResponseEntity<String> logInUserHandler(Authentication auth) throws AdminException {
+		Admin admin = adminService.findByEmail(auth.getName()).get();
+		return new ResponseEntity<>(admin.getEmail() + " Logged In Successfully", HttpStatus.ACCEPTED);
+	}	
 	
 	
 	@DeleteMapping("/delete/{adminId}")

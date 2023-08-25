@@ -19,20 +19,22 @@ import com.masai.repository.AdminRepository;
 import com.masai.repository.CustomerRepository;
 
 @Service
-public class CustomerDetailsService implements UserDetailsService {
+public class ManualUserDetailsService implements UserDetailsService {
+    
+	@Autowired
+	 private AdminRepository adminRepository;
 	
 	@Autowired
-	 private CustomerRepository customerRepository;
-	
-	@Autowired
-	private AdminRepository adminRepository;
+	private CustomerRepository customerRepository;
 	
 	public boolean isAdmin(String email) {
 	   Optional<Admin> admin = adminRepository.findByEmail(email);
 		if(admin.isPresent()) return true;
 		else return false;
 	}
-
+	
+	
+	
 	@Override
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 		
@@ -40,26 +42,30 @@ public class CustomerDetailsService implements UserDetailsService {
 			Optional<Admin> admin = adminRepository.findByEmail(email);
 			 
 			 if(admin.isEmpty()) throw new UsernameNotFoundException("Admin not found");
-			 Admin us = admin.get();			
+			 Admin us = admin.get();
+			 
+			
 			 
 			List<GrantedAuthority> authorities = new ArrayList<>() ;
-			SimpleGrantedAuthority autho = new SimpleGrantedAuthority(us.getEmail()) ;
+			SimpleGrantedAuthority autho = new SimpleGrantedAuthority("ROLE_"+us.getRole()) ;
 			authorities.add(autho) ;
 			User secUser = new User(us.getEmail(), us.getPassword(),  authorities) ;
 			return secUser ;
 		}else {
 			
-			Optional<Customer> myCustomer = customerRepository.findByEmail(email);
+			Optional<Customer> myUser = customerRepository.findByEmail(email);
 				 
-				 if(myCustomer.isEmpty()) throw new UsernameNotFoundException("Customer not found");
-				 Customer cs = myCustomer.get();
+				 if(myUser.isEmpty()) throw new UsernameNotFoundException("Customer not found");
+				 Customer us = myUser.get();
 				 
-	 
+				 
 				List<GrantedAuthority> authorities = new ArrayList<>() ;
-				SimpleGrantedAuthority autho = new SimpleGrantedAuthority(cs.getEmail()) ;
+				SimpleGrantedAuthority autho = new SimpleGrantedAuthority("ROLE_"+us.getRole()) ;
 				authorities.add(autho) ;
-				User secUser = new User(cs.getEmail(), cs.getPassword(),  authorities) ;
-				return secUser ;			
+				User secUser = new User(us.getEmail(), us.getPassword(),  authorities) ;
+				return secUser ;
+
+				
 			}
 		}
 }
