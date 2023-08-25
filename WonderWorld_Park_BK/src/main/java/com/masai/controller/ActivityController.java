@@ -31,6 +31,7 @@ public class ActivityController {
 	
 	@PostMapping("/add")
 	public ResponseEntity<Activity> addActivity(@Valid @RequestBody Activity activity)throws ActivityException{
+		activity.setIsDeleted(false);
 		return new ResponseEntity<Activity>(activityService.insertActivity(activity),HttpStatus.CREATED);
 	}
 	

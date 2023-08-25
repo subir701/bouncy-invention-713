@@ -25,7 +25,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
+
 @NoArgsConstructor
 @Entity
 @Data
@@ -61,5 +61,21 @@ public class Activity {
 	@JsonIgnore
 	@OneToMany(fetch = FetchType.EAGER, mappedBy = "activity", cascade = CascadeType.ALL)
 	private List<Ticket> tickets = new ArrayList<>();
+
+	public Activity(String activityName, Double price, String url, Integer personCapacity, Integer distance,
+			LocalDateTime createdOn, LocalDateTime lastUpdatedOn, List<Ticket> tickets) {
+		super();
+		this.activityName = activityName;
+		this.price = price;
+		this.url = url;
+		this.isDeleted=false;
+		this.personCapacity = personCapacity;
+		this.distance = distance;
+		this.createdOn = createdOn;
+		this.lastUpdatedOn = lastUpdatedOn;
+		this.tickets = tickets;
+	}
+	
+	
 	
 }

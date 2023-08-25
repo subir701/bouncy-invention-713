@@ -33,6 +33,7 @@ public class CustomerController {
 	
 	@PostMapping("/registerCustomer")
 	private ResponseEntity<Customer> registerCustomer(@RequestBody Customer customer)throws CustomerException{
+		customer.setIsDeleted(false);
 		customer.setPassword(passwordEncoder.encode(customer.getPassword()));
 		Customer c = customerService.registerCustomer(customer);
 		return new ResponseEntity<Customer>(c, HttpStatus.CREATED);	
@@ -58,6 +59,6 @@ public class CustomerController {
 	
 	@GetMapping("/{customerId}")
 	public ResponseEntity<Customer> getCustomerById(@PathVariable Integer customerId)throws CustomerException{
-		return new ResponseEntity<Customer>(customerService.viewCustomerById(customerId),HttpStatus.FOUND);
+		return new ResponseEntity<Customer>(customerService.viewCustomerById(customerId),HttpStatus.OK);
 	}
 }

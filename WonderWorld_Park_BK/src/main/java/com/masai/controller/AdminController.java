@@ -49,6 +49,7 @@ public class AdminController {
 	
 	@PostMapping("/registerAdmin")
 	public ResponseEntity<Admin> createAdmin(@Valid @RequestBody Admin admin) throws AdminException{
+		admin.setIsDeleted(false);
 		admin.setPassword(passwordEncoder.encode(admin.getPassword()));
 		Admin ad = adminService.insertAdmin(admin);
 		return new ResponseEntity<Admin>(ad, HttpStatus.CREATED);
@@ -68,12 +69,12 @@ public class AdminController {
 	
 	@GetMapping("/customers")
 	public ResponseEntity<List<Customer>> getAllCustomer()throws CustomerException{
-		return new ResponseEntity<List<Customer>>(customerService.viewAllCustomer(),HttpStatus.FOUND);
+		return new ResponseEntity<List<Customer>>(customerService.viewAllCustomer(),HttpStatus.OK);
 	}
 	
 	@GetMapping("/customers/{customerId}")
 	public ResponseEntity<Customer> getCustomerById(@PathVariable Integer customerId)throws CustomerException{
-		return new ResponseEntity<Customer>(customerService.viewCustomerById(customerId),HttpStatus.FOUND);
+		return new ResponseEntity<Customer>(customerService.viewCustomerById(customerId),HttpStatus.OK);
 	}
 }
 

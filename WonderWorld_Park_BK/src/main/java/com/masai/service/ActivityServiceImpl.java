@@ -24,7 +24,7 @@ public class ActivityServiceImpl implements ActivityService {
 
 	@Override
 	public Activity insertActivity(Activity activiy) throws ActivityException {
-		if(activiy!=null)throw new ActivityException("Activity is null");
+		if(activiy==null)throw new ActivityException("Activity is null");
 		if(activiy.getPrice()<=0.0)throw new ActivityException("price needs to be greater than zero");
 		log.debug("Calling save method from activityJpa Repository");
 		Activity main=activityRepo.save(activiy);
