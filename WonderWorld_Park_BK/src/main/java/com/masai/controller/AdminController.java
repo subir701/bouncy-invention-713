@@ -6,6 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,6 +30,7 @@ import lombok.extern.slf4j.Slf4j;
 @RestController
 @RequestMapping("/wonderWorld/admin")
 @Slf4j
+
 public class AdminController {
 
 	@Autowired
@@ -36,11 +39,18 @@ public class AdminController {
 	@Autowired
 	private CustomerService customerService;
 	
-	@PostMapping("/register")
-	public ResponseEntity<Admin> registerAdmin(@Valid @RequestBody Admin admin)throws AdminException{
-		System.out.println(admin.getAdminId());
-		return new ResponseEntity<Admin>(adminService.insertAdmin(admin),HttpStatus.CREATED);
+
+	@Autowired
+	private PasswordEncoder passwordEncoder;
+	
+	
+	@PostMapping("/registerAdmin")
+	public ResponseEntity<Admin> createAdmin(@RequestBody Admin admin) throws AdminException{
+		admin.setPassword(passwordEncoder.encode(admin.getPassword()));
+		Admin ad = adminService.insertAdmin(admin);
+		return new ResponseEntity<Admin>(ad, HttpStatus.CREATED);
 	}
+	
 	
 	@PutMapping("/delete/{adminId}")
 	public ResponseEntity<Admin> deleteAdmin(@PathVariable Integer adminId)throws AdminException{
