@@ -23,7 +23,7 @@ import com.masai.service.ActivityService;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/wonderWorld/activities")
+@RequestMapping("/activities")
 public class ActivityController {
 
 	@Autowired
