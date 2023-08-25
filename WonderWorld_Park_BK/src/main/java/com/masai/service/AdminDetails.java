@@ -6,15 +6,15 @@ import java.util.Collection;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.masai.model.Customer;
+import com.masai.model.Admin;
 
-public class ManualCustomerDetails implements UserDetails{
+public class AdminDetails implements UserDetails{
 	
-	private Customer customer;
+	private Admin admin;
 	
-	public ManualCustomerDetails(Customer customer) {
+	public AdminDetails(Admin admin) {
 		super();
-		this.customer = customer;
+		this.admin = admin;
 	}
 
 	@Override
@@ -24,32 +24,35 @@ public class ManualCustomerDetails implements UserDetails{
 
 	@Override
 	public String getPassword() {
-		return customer.getPassword();
+		return admin.getPassword();
 	}
 
 	@Override
 	public String getUsername() {
-		return customer.getEmail();
+		return admin.getEmail();
 	}
 
 	@Override
 	public boolean isAccountNonExpired() {
+		
 		return true;
 	}
 
 	@Override
 	public boolean isAccountNonLocked() {
+	
 		return true;
 	}
 
 	@Override
 	public boolean isCredentialsNonExpired() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
 	public boolean isEnabled() {
+		// TODO Auto-generated method stub
 		return true;
 	}
 

@@ -19,7 +19,7 @@ import com.masai.repository.AdminRepository;
 import com.masai.repository.CustomerRepository;
 
 @Service
-public class ManualCustomerDetailsService implements UserDetailsService {
+public class CustomerDetailsService implements UserDetailsService {
 	
 	@Autowired
 	 private CustomerRepository customerRepository;
@@ -51,19 +51,15 @@ public class ManualCustomerDetailsService implements UserDetailsService {
 			
 			Optional<Customer> myCustomer = customerRepository.findByEmail(email);
 				 
-				 if(myCustomer.isEmpty()) throw new UsernameNotFoundException("User not found");
-				 Customer us = myCustomer.get();
+				 if(myCustomer.isEmpty()) throw new UsernameNotFoundException("Customer not found");
+				 Customer cs = myCustomer.get();
 				 
 	 
 				List<GrantedAuthority> authorities = new ArrayList<>() ;
-				SimpleGrantedAuthority autho = new SimpleGrantedAuthority(us.getEmail()) ;
+				SimpleGrantedAuthority autho = new SimpleGrantedAuthority(cs.getEmail()) ;
 				authorities.add(autho) ;
-				User secUser = new User(us.getEmail(), us.getPassword(),  authorities) ;
-				return secUser ;
-
-				
+				User secUser = new User(cs.getEmail(), cs.getPassword(),  authorities) ;
+				return secUser ;			
 			}
 		}
-
-
 }
