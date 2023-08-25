@@ -17,13 +17,13 @@ import lombok.NoArgsConstructor;
 public class TicketDTO {
 
 
-//	@NotNull(message = "Not a valid Date")
-//	@Column(name = "visitDatesds")
+	@NotNull(message = "Not a valid Date")
+	@Column(name = "visitDatesds")
 	private String visitDate;
 	
 	
-//	@Column(name = "personCount")
-//	@Min(value = 1, message = "At least 1 person needed to book a ticket")
+	@Column(name = "personCount")
+	@Min(value = 1, message = "At least 1 person needed to book a ticket")
 	private Integer personCount;
 
 }

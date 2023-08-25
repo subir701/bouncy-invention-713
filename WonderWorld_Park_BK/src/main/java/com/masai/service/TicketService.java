@@ -2,12 +2,14 @@ package com.masai.service;
 
 import java.util.List;
 
+import com.masai.DTO.TicketDTO;
 import com.masai.model.Ticket;
 
 public interface TicketService {
-	public Ticket createTicket(Integer customerId, Integer activityId, Ticket ticketDTO) ;
+	public Ticket createTicket(Integer customerId, Integer activityId, TicketDTO ticketDTO) ;
 
-	public Ticket updateTicket(Integer customerId, Integer ticketId, Ticket ticketDTO) ;
+	public Ticket updateTicket(Integer customerId, Integer ticketId, TicketDTO
+			ticketDTO) ;
 	
 	public Ticket getTicketById(Integer customerId, Integer ticketId) ;
 	

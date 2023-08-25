@@ -29,20 +29,22 @@ import lombok.Setter;
 @Entity
 public class Ticket {
 	
+	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer ticketId;
 	
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@ManyToOne( fetch = FetchType.EAGER)
 	@JoinColumn(name = "customerId")
 	private Customer customer;
 	
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@ManyToOne( fetch = FetchType.EAGER)
 	@JoinColumn(name = "activityId")
 	private Activity activity;
 	
 	@CreationTimestamp
-	private LocalDateTime visitDateAndTime;
+	private LocalDate visitDate;
 	
 	@DecimalMin("0")
 	private Double price;
@@ -62,4 +64,15 @@ public class Ticket {
 	@Min(1)
 	private Integer personCount;
 
+
+	public Ticket(Customer customer, Activity activity, LocalDate visitDate, @DecimalMin("0") Double price, Boolean isExpired, @Min(1) Integer personCount) {
+		super();
+		this.customer = customer;
+		this.activity = activity;
+		this.visitDate = visitDate;
+		this.price = price;
+		this.isExpired = isExpired;
+		this.personCount = personCount;
+	}
+   
 }
