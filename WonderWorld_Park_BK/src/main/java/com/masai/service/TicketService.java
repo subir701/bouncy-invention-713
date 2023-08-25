@@ -19,4 +19,8 @@ public interface TicketService {
 	
 	public List<Ticket> getTicketBookingHistory(Integer customerId, Integer pageNumber, Integer itemsPerPage) ;
 
+	List<Ticket> getTicketBookingHistoryForDay(Integer customerId);
+
+	Double getTotalFair(Integer customerId);
+
 }

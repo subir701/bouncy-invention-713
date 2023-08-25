@@ -87,7 +87,7 @@ public class TicketController {
 		return new ResponseEntity<>(message, status);
 	}
 	
-	@GetMapping("/{customerId}")
+	@GetMapping("/history/{customerId}")
 	public ResponseEntity<List<Ticket>> getTicketBookingHistory(
 			@PathVariable Integer customerId,
 			@RequestParam("pageNumber") Integer pageNumber,
@@ -96,5 +96,22 @@ public class TicketController {
 		
 		return new ResponseEntity<>(ticketService.getTicketBookingHistory(customerId, pageNumber, itemsPerPage), HttpStatus.OK);
 	}
+	
+	@GetMapping("/todayHistory/{customerId}")
+	public ResponseEntity<List<Ticket>> getTicketBookingHistoryForTheDay(
+			@PathVariable Integer customerId) {
+		
+		return new ResponseEntity<>(ticketService.getTicketBookingHistoryForDay(customerId), HttpStatus.OK);
+	}
+	
+	
+	@GetMapping("/fair/{customerId}")
+	public ResponseEntity<Double> getTotalFairForTheCustomer(
+			@PathVariable Integer customerId) {
+		
+		return new ResponseEntity<>(ticketService.getTotalFair(customerId), HttpStatus.OK);
+	}
+	
+	
 	
 }
