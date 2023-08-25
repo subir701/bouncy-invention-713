@@ -243,6 +243,19 @@ public class TicketServiceImpl implements TicketService {
 		
 		return fair;
 	}
+
+	@Override
+	public List<Ticket> viewAll() throws TicketException{
+		List<Ticket> list=ticketRepo.findAll();
+		if(list.isEmpty())throw new TicketException("No Ticket Found");
+		return list;
+	}
+
+	@Override
+	public Ticket getTicketById(Integer ticketId) throws TicketException{
+		
+		return ticketRepo.findById(ticketId).orElseThrow(()-> new TicketException("No Ticket Found"));
+	}
 	
 
 }

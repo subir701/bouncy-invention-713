@@ -1213,3 +1213,144 @@ org.springframework.security.authentication.BadCredentialsException: Invalid Tok
 2023-08-25T19:09:03.465+05:30  INFO 6232 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-08-25T19:09:03.497+05:30  INFO 6232 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
 2023-08-25T19:09:03.510+05:30  INFO 6232 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-08-25T19:09:04.523+05:30  INFO 6232 --- [restartedMain] com.masai.WonderWorldParkBkApplication   : Starting WonderWorldParkBkApplication using Java 17.0.7 with PID 6232 (C:\Users\sumit\OneDrive\Desktop\project\bouncy-invention-713\WonderWorld_Park_BK\target\classes started by sumit in C:\Users\sumit\OneDrive\Desktop\project\bouncy-invention-713\WonderWorld_Park_BK)
+2023-08-25T19:09:04.525+05:30  INFO 6232 --- [restartedMain] com.masai.WonderWorldParkBkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-25T19:09:05.869+05:30  INFO 6232 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-25T19:09:05.930+05:30  INFO 6232 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 4 JPA repository interfaces.
+2023-08-25T19:09:06.329+05:30  INFO 6232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2023-08-25T19:09:06.330+05:30  INFO 6232 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-25T19:09:06.330+05:30  INFO 6232 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-25T19:09:06.529+05:30  INFO 6232 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-25T19:09:06.529+05:30  INFO 6232 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1996 ms
+2023-08-25T19:09:06.909+05:30  INFO 6232 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-25T19:09:06.937+05:30  INFO 6232 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-25T19:09:06.937+05:30  INFO 6232 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-25T19:09:06.944+05:30  INFO 6232 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-08-25T19:09:06.984+05:30  INFO 6232 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@44e8d635
+2023-08-25T19:09:06.984+05:30  INFO 6232 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-08-25T19:09:07.185+05:30  INFO 6232 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-25T19:09:07.831+05:30  INFO 6232 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-25T19:09:08.276+05:30  INFO 6232 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-25T19:09:08.850+05:30  WARN 6232 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-25T19:09:09.119+05:30  INFO 6232 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5fd6788e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2f463a5f, org.springframework.security.web.context.SecurityContextHolderFilter@50060c8, org.springframework.security.web.header.HeaderWriterFilter@7c459109, org.springframework.web.filter.CorsFilter@20e72cdd, org.springframework.security.web.authentication.logout.LogoutFilter@67f55df1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2f841547, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1671fc5e, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5c34d005, com.masai.security.JwtTokenValidatorFilter@30cac105, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@62d3cf93, com.masai.security.JwtTokenGeneratorFilter@2ec08181, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5094ecf3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@89e231, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3758c140, org.springframework.security.web.session.SessionManagementFilter@666e000e, org.springframework.security.web.access.ExceptionTranslationFilter@eab7d56, org.springframework.security.web.access.intercept.AuthorizationFilter@31a83902]
+2023-08-25T19:09:09.355+05:30  INFO 6232 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-25T19:09:09.415+05:30  INFO 6232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2023-08-25T19:09:09.431+05:30  INFO 6232 --- [restartedMain] com.masai.WonderWorldParkBkApplication   : Started WonderWorldParkBkApplication in 5.209 seconds (process running for 2699.916)
+2023-08-25T19:09:09.435+05:30  INFO 6232 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-25T19:09:09.564+05:30  INFO 6232 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-25T19:09:09.564+05:30  INFO 6232 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-25T19:09:09.566+05:30  INFO 6232 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-08-25T19:09:09.567+05:30 DEBUG 6232 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/index.html
+2023-08-25T19:09:09.568+05:30 DEBUG 6232 --- [http-nio-8888-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-08-25T19:09:09.569+05:30 DEBUG 6232 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/index.html
+2023-08-25T19:09:09.619+05:30 DEBUG 6232 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-bundle.js
+2023-08-25T19:09:09.620+05:30 DEBUG 6232 --- [http-nio-8888-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-08-25T19:09:09.623+05:30 DEBUG 6232 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-bundle.js
+2023-08-25T19:09:09.634+05:30 DEBUG 6232 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-standalone-preset.js
+2023-08-25T19:09:09.636+05:30 DEBUG 6232 --- [http-nio-8888-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-08-25T19:09:09.637+05:30 DEBUG 6232 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-initializer.js
+2023-08-25T19:09:09.637+05:30 DEBUG 6232 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-standalone-preset.js
+2023-08-25T19:09:09.638+05:30 DEBUG 6232 --- [http-nio-8888-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-08-25T19:09:09.638+05:30 DEBUG 6232 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-initializer.js
+2023-08-25T19:09:10.130+05:30 DEBUG 6232 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /v3/api-docs/swagger-config
+2023-08-25T19:09:10.131+05:30 DEBUG 6232 --- [http-nio-8888-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-08-25T19:09:10.147+05:30 DEBUG 6232 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /v3/api-docs/swagger-config
+2023-08-25T19:09:10.179+05:30 DEBUG 6232 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /v3/api-docs
+2023-08-25T19:09:10.180+05:30 DEBUG 6232 --- [http-nio-8888-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-08-25T19:09:10.182+05:30 DEBUG 6232 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /v3/api-docs
+2023-08-25T19:09:10.752+05:30  INFO 6232 --- [http-nio-8888-exec-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 562 ms
+2023-08-25T19:15:25.264+05:30 DEBUG 6232 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /admin/signin
+2023-08-25T19:15:25.997+05:30 DEBUG 6232 --- [http-nio-8888-exec-10] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-08-25T19:15:25.998+05:30 DEBUG 6232 --- [http-nio-8888-exec-10] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin1@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2023-08-25T19:15:26.010+05:30 DEBUG 6232 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /admin/signin
+2023-08-25T19:20:01.840+05:30  INFO 6232 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2023-08-25T19:20:01.908+05:30  INFO 6232 --- [Thread-11] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-25T19:20:01.908+05:30  INFO 6232 --- [Thread-11] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-08-25T19:20:01.921+05:30  INFO 6232 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-25T19:20:01.923+05:30  INFO 6232 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-08-25T19:20:01.940+05:30  INFO 6232 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2023-08-25T19:20:02.168+05:30  INFO 6232 --- [restartedMain] com.masai.WonderWorldParkBkApplication   : Starting WonderWorldParkBkApplication using Java 17.0.7 with PID 6232 (C:\Users\sumit\OneDrive\Desktop\project\bouncy-invention-713\WonderWorld_Park_BK\target\classes started by sumit in C:\Users\sumit\OneDrive\Desktop\project\bouncy-invention-713\WonderWorld_Park_BK)
+2023-08-25T19:20:02.169+05:30  INFO 6232 --- [restartedMain] com.masai.WonderWorldParkBkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-25T19:20:03.118+05:30  INFO 6232 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-25T19:20:03.206+05:30  INFO 6232 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 4 JPA repository interfaces.
+2023-08-25T19:20:03.495+05:30  INFO 6232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2023-08-25T19:20:03.495+05:30  INFO 6232 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-25T19:20:03.495+05:30  INFO 6232 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-25T19:20:03.528+05:30  INFO 6232 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-25T19:20:03.529+05:30  INFO 6232 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1350 ms
+2023-08-25T19:20:03.595+05:30  INFO 6232 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-25T19:20:03.614+05:30  INFO 6232 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-25T19:20:03.615+05:30  INFO 6232 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-25T19:20:03.616+05:30  INFO 6232 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2023-08-25T19:20:03.643+05:30  INFO 6232 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ccf610a
+2023-08-25T19:20:03.644+05:30  INFO 6232 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2023-08-25T19:20:03.689+05:30  INFO 6232 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-25T19:20:03.877+05:30  INFO 6232 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-25T19:20:04.151+05:30  INFO 6232 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-25T19:20:04.472+05:30  WARN 6232 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-25T19:20:04.772+05:30  INFO 6232 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@551e4b07, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1937ca84, org.springframework.security.web.context.SecurityContextHolderFilter@437e5e5c, org.springframework.security.web.header.HeaderWriterFilter@478dc43b, org.springframework.web.filter.CorsFilter@3ea4a2a6, org.springframework.security.web.authentication.logout.LogoutFilter@4b946cc1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@730a97cb, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7eb13021, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5c6ef39d, com.masai.security.JwtTokenValidatorFilter@7b0fdd64, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2598e601, com.masai.security.JwtTokenGeneratorFilter@5c4b4b6b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@18f59ee3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@31702dda, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@476173d6, org.springframework.security.web.session.SessionManagementFilter@4fa015c0, org.springframework.security.web.access.ExceptionTranslationFilter@691658c8, org.springframework.security.web.access.intercept.AuthorizationFilter@54130ede]
+2023-08-25T19:20:04.976+05:30  INFO 6232 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-25T19:20:05.002+05:30  INFO 6232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2023-08-25T19:20:05.023+05:30  INFO 6232 --- [restartedMain] com.masai.WonderWorldParkBkApplication   : Started WonderWorldParkBkApplication in 2.938 seconds (process running for 3355.508)
+2023-08-25T19:20:05.026+05:30  INFO 6232 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-25T19:20:06.756+05:30  INFO 6232 --- [RMI TCP Connection(44)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-08-25T19:20:06.770+05:30  INFO 6232 --- [RMI TCP Connection(44)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-25T19:20:06.776+05:30  INFO 6232 --- [RMI TCP Connection(44)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-25T19:20:06.777+05:30  INFO 6232 --- [RMI TCP Connection(44)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2023-08-25T19:20:06.783+05:30  INFO 6232 --- [RMI TCP Connection(44)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2023-08-25T20:33:16.195+05:30  INFO 31092 --- [restartedMain] com.masai.WonderWorldParkBkApplication   : Starting WonderWorldParkBkApplication using Java 17.0.7 with PID 31092 (C:\Users\sumit\OneDrive\Desktop\project\bouncy-invention-713\WonderWorld_Park_BK\target\classes started by sumit in C:\Users\sumit\OneDrive\Desktop\project\bouncy-invention-713\WonderWorld_Park_BK)
+2023-08-25T20:33:16.202+05:30  INFO 31092 --- [restartedMain] com.masai.WonderWorldParkBkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-25T20:33:16.325+05:30  INFO 31092 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-25T20:33:16.326+05:30  INFO 31092 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-25T20:33:17.468+05:30  INFO 31092 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-25T20:33:17.632+05:30  INFO 31092 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 145 ms. Found 4 JPA repository interfaces.
+2023-08-25T20:33:18.501+05:30  INFO 31092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2023-08-25T20:33:18.518+05:30  INFO 31092 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-25T20:33:18.518+05:30  INFO 31092 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-25T20:33:18.668+05:30  INFO 31092 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-25T20:33:18.668+05:30  INFO 31092 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2341 ms
+2023-08-25T20:33:18.946+05:30  INFO 31092 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-25T20:33:19.034+05:30  INFO 31092 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-08-25T20:33:19.038+05:30  INFO 31092 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-08-25T20:33:19.310+05:30  INFO 31092 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-25T20:33:19.586+05:30  INFO 31092 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-25T20:33:19.618+05:30  INFO 31092 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-25T20:33:20.519+05:30  INFO 31092 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6bd4effd
+2023-08-25T20:33:20.525+05:30  INFO 31092 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-25T20:33:21.124+05:30  INFO 31092 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-25T20:33:22.221+05:30  INFO 31092 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-25T20:33:22.755+05:30  INFO 31092 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-25T20:33:23.132+05:30  INFO 31092 --- [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-08-25T20:33:23.926+05:30  WARN 31092 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-25T20:33:24.466+05:30  INFO 31092 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@206bd99b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6a13bfb, org.springframework.security.web.context.SecurityContextHolderFilter@123e7211, org.springframework.security.web.header.HeaderWriterFilter@76198e2d, org.springframework.web.filter.CorsFilter@4e062fa4, org.springframework.security.web.authentication.logout.LogoutFilter@67968e53, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3a0d6326, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7f2f63bc, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@780dc32d, com.masai.security.JwtTokenValidatorFilter@6547ab6, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7f7b22f7, com.masai.security.JwtTokenGeneratorFilter@925e764, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@723ade7d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3116af4c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@76a192eb, org.springframework.security.web.session.SessionManagementFilter@3b18f22b, org.springframework.security.web.access.ExceptionTranslationFilter@62245a95, org.springframework.security.web.access.intercept.AuthorizationFilter@77adfd1f]
+2023-08-25T20:33:24.860+05:30  INFO 31092 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-25T20:33:24.980+05:30  INFO 31092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2023-08-25T20:33:24.996+05:30  INFO 31092 --- [restartedMain] com.masai.WonderWorldParkBkApplication   : Started WonderWorldParkBkApplication in 9.345 seconds (process running for 10.759)
+2023-08-25T20:33:33.609+05:30  INFO 31092 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-25T20:33:33.610+05:30  INFO 31092 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-25T20:33:33.614+05:30  INFO 31092 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-08-25T20:33:33.645+05:30 DEBUG 31092 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/index.html
+2023-08-25T20:33:33.684+05:30 DEBUG 31092 --- [http-nio-8888-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-08-25T20:33:33.726+05:30 DEBUG 31092 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/index.html
+2023-08-25T20:33:34.132+05:30 DEBUG 31092 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-bundle.js
+2023-08-25T20:33:34.132+05:30 DEBUG 31092 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-standalone-preset.js
+2023-08-25T20:33:34.134+05:30 DEBUG 31092 --- [http-nio-8888-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-08-25T20:33:34.140+05:30 DEBUG 31092 --- [http-nio-8888-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-08-25T20:33:34.145+05:30 DEBUG 31092 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-standalone-preset.js
+2023-08-25T20:33:34.149+05:30 DEBUG 31092 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-bundle.js
+2023-08-25T20:33:34.159+05:30 DEBUG 31092 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-initializer.js
+2023-08-25T20:33:34.160+05:30 DEBUG 31092 --- [http-nio-8888-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-08-25T20:33:34.162+05:30 DEBUG 31092 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-initializer.js
+2023-08-25T20:33:34.849+05:30 DEBUG 31092 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /v3/api-docs/swagger-config
+2023-08-25T20:33:34.850+05:30 DEBUG 31092 --- [http-nio-8888-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-08-25T20:33:34.856+05:30 DEBUG 31092 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /v3/api-docs/swagger-config
+2023-08-25T20:33:34.944+05:30 DEBUG 31092 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /v3/api-docs
+2023-08-25T20:33:34.945+05:30 DEBUG 31092 --- [http-nio-8888-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-08-25T20:33:34.946+05:30 DEBUG 31092 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /v3/api-docs
+2023-08-25T20:33:35.917+05:30  INFO 31092 --- [http-nio-8888-exec-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 944 ms
+2023-08-25T20:33:59.390+05:30  INFO 31092 --- [RMI TCP Connection(9)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-08-25T20:33:59.410+05:30  INFO 31092 --- [RMI TCP Connection(9)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-25T20:33:59.412+05:30  INFO 31092 --- [RMI TCP Connection(9)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-08-25T20:33:59.431+05:30  INFO 31092 --- [RMI TCP Connection(9)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-25T20:33:59.437+05:30  INFO 31092 --- [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-25T20:33:59.486+05:30  INFO 31092 --- [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

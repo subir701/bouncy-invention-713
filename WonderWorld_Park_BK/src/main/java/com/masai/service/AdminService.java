@@ -3,6 +3,7 @@ package com.masai.service;
 
 
 
+import java.util.List;
 import java.util.Optional;
 
 import com.masai.Exception.AdminException;
@@ -16,6 +17,9 @@ public interface AdminService {
 	
 	Optional<Admin> findByEmail(String Email)throws AdminException;
 
+	Admin findByAdminId(Integer adminId)throws AdminException;
+	
+	List<Admin> viewAllAdmin(Integer pageNumber,Integer pageSize)throws AdminException;
 	
 	
 }
