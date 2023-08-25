@@ -29,7 +29,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequestMapping("/wonderWorld/admin")
-@Slf4j
+
 
 public class AdminController {
 
@@ -45,7 +45,7 @@ public class AdminController {
 	
 	
 	@PostMapping("/registerAdmin")
-	public ResponseEntity<Admin> createAdmin(@RequestBody Admin admin) throws AdminException{
+	public ResponseEntity<Admin> createAdmin(@Valid @RequestBody Admin admin) throws AdminException{
 		admin.setPassword(passwordEncoder.encode(admin.getPassword()));
 		Admin ad = adminService.insertAdmin(admin);
 		return new ResponseEntity<Admin>(ad, HttpStatus.CREATED);
