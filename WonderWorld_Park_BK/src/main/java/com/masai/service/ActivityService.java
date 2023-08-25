@@ -30,4 +30,6 @@ public interface ActivityService {
 	 
 	 List<Activity> getAllActivitiesOnBasisOfDate(LocalDateTime start, LocalDateTime end)throws ActivityException;
 	 
+	 List<Activity> getAllActivityByCustomerId(Integer customerId)throws ActivityException;
+	 
 }

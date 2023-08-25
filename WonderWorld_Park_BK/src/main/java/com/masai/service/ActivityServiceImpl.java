@@ -11,7 +11,9 @@ import org.springframework.stereotype.Service;
 
 import com.masai.Exception.ActivityException;
 import com.masai.model.Activity;
+import com.masai.model.Customer;
 import com.masai.repository.ActivityRepository;
+import com.masai.repository.CustomerRepository;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -22,6 +24,8 @@ public class ActivityServiceImpl implements ActivityService {
 	@Autowired
 	private ActivityRepository activityRepo;
 
+	@Autowired
+	private CustomerRepository customerRepo;
 	@Override
 	public Activity insertActivity(Activity activiy) throws ActivityException {
 		if(activiy==null)throw new ActivityException("Activity is null");
@@ -123,10 +127,23 @@ public class ActivityServiceImpl implements ActivityService {
 	@Override
 	public List<Activity> getAllActivitiesOnBasisOfDate(LocalDateTime start, LocalDateTime end)
 			throws ActivityException {
-		if(start.isBefore(end))throw new ActivityException("start cannot be greater than end");
+		
+		if(end.isBefore(start))throw new ActivityException("start cannot be greater than end");
 		List<Activity> list= activityRepo.findActivitiesForDays(start, end);
 		if(list.isEmpty())throw new ActivityException("No activity found");
 		return list;
+	}
+
+	@Override
+	public List<Activity> getAllActivityByCustomerId(Integer customerId) throws ActivityException {
+		Optional<Customer> cust=customerRepo.findById(customerId);
+		if(cust.isPresent()) {
+			List<Activity> list= activityRepo.findAllActivitiesByCustomerId(customerId);
+			return list;
+		}else {
+			throw new ActivityException("No customer found");
+		}
+		
 	}
 
 }

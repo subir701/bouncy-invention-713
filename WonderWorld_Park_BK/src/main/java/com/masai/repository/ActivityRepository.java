@@ -28,5 +28,8 @@ public interface ActivityRepository extends JpaRepository<Activity, Integer> {
 
 	 @Query("SELECT a FROM Activity a WHERE a.createdOn BETWEEN :startDate AND :endDate")
 	    List<Activity> findActivitiesForDays(LocalDateTime startDate, LocalDateTime endDate);
+	 
+	 @Query("SELECT a FROM Activity a JOIN a.tickets t JOIN t.customer c WHERE c.customerId = :customerId")
+	    List<Activity> findAllActivitiesByCustomerId(Integer customerId);
 
 }

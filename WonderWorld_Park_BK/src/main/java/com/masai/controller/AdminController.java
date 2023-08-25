@@ -5,6 +5,8 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
@@ -146,12 +148,15 @@ public class AdminController {
 	}
 	
 	@GetMapping("/activity/getAllActivitiesByDate")
-	public ResponseEntity<List<Activity>> getAllActivitiesByDateTime(@RequestParam LocalDateTime start, @RequestParam LocalDateTime end)throws ActivityException{
+	public ResponseEntity<List<Activity>> getAllActivitiesByDateTime(
+			@RequestParam @DateTimeFormat(iso = ISO.DATE_TIME) LocalDateTime start, 
+			@RequestParam @DateTimeFormat(iso = ISO.DATE_TIME) LocalDateTime end)
+					throws ActivityException{
 		return new ResponseEntity<List<Activity>>(activityService.getAllActivitiesOnBasisOfDate(start, end),HttpStatus.OK);
 	}
 	
 	@GetMapping("/activity/getAllActivitiesOfCustomerByDate/{customerId}/date")
-	public ResponseEntity<List<Activity>> getAllActivitiesOfCustomerByDate(@PathVariable Integer customerId,@RequestParam LocalDateTime start)throws ActivityException{
+	public ResponseEntity<List<Activity>> getAllActivitiesOfCustomerByDate(@PathVariable Integer customerId,@RequestParam @DateTimeFormat(iso = ISO.DATE_TIME) LocalDateTime start)throws ActivityException{
 		return new ResponseEntity<List<Activity>>(activityService.getAllActivitiesForDays(customerId, start),HttpStatus.OK);
 	}
 	
