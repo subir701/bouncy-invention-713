@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,7 +23,6 @@ import com.masai.model.Customer;
 import com.masai.service.AdminService;
 import com.masai.service.CustomerService;
 
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
 
 @RestController
 @RequestMapping("/admin")
@@ -44,6 +44,12 @@ public class AdminController {
 		Admin ad = adminService.insertAdmin(admin);
 		return new ResponseEntity<Admin>(ad, HttpStatus.CREATED);
 	}
+	
+	@GetMapping("/signin")
+	public ResponseEntity<String> logInUserHandler(Authentication auth) throws AdminException {
+		Admin admin = adminService.findByEmail(auth.getName()).get();
+		return new ResponseEntity<>(admin.getEmail() + " Logged In Successfully", HttpStatus.ACCEPTED);
+	}	
 	
 	
 	@PutMapping("/delete/{adminId}")

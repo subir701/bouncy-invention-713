@@ -7,7 +7,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.masai.Exception.AdminException;
 import com.masai.Exception.CustomerException;
+import com.masai.model.Admin;
 import com.masai.model.Customer;
 import com.masai.model.Role;
 import com.masai.repository.CustomerRepository;
@@ -27,7 +29,7 @@ public class CustomerServiceImpl implements CustomerService{
 		Optional<Customer> c=customerRepo.findByEmail(customer.getEmail());
 		if(c.isPresent())throw new CustomerException("Email is already present");
 		log.debug("Calling save method from CustomerJpa Repository");
-		customer.setRole(Role.USER);
+//		customer.setRole(Role.USER);
 		customer.setCreatedOn(LocalDateTime.now());
 		Customer main= customerRepo.save(customer);
 		log.info("Customer is saved sucessfully");
@@ -79,6 +81,14 @@ public class CustomerServiceImpl implements CustomerService{
 	public Customer viewCustomerById(Integer customerId) throws CustomerException {
 		log.debug("Calling findById method from CustomerJpa Repository");
 		return customerRepo.findById(customerId).orElseThrow(()->new CustomerException("No customer found by this customer id"));
+	}
+	
+	
+	@Override
+	public Optional<Customer> findByEmail(String email) throws CustomerException{
+		Optional<Customer> user= customerRepo.findByEmail(email);
+		 if(user.isEmpty()) throw new CustomerException("No Customer found");
+		 return user;
 	}
 
 }

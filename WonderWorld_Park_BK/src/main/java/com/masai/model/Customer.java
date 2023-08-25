@@ -3,6 +3,8 @@ package com.masai.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -27,6 +29,10 @@ public class Customer  extends AbstractUser {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer customerId;
 	
+	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "customer")
 	private List<Ticket> tickets = new ArrayList<>();
+	
+	@JsonIgnore
+	private String role = "USER";
 }

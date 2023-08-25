@@ -11,8 +11,6 @@ import io.swagger.v3.oas.annotations.security.SecurityScheme;
 import io.swagger.v3.oas.annotations.security.SecuritySchemes;
 import io.swagger.v3.oas.annotations.servers.Server;
 
-
-
 @OpenAPIDefinition(info = @Info(title = "REST API", version = "1.1"),
 security = {
 	@SecurityRequirement(name = "basicAuth"), 
@@ -26,7 +24,6 @@ servers = {
 @SecurityScheme(name = "basicAuth", type = SecuritySchemeType.HTTP, scheme = "basic"),
 @SecurityScheme(name = "bearerToken", type = SecuritySchemeType.HTTP, scheme = "bearer", bearerFormat = "JWT")
 })
-
 
 @SpringBootApplication
 public class WonderWorldParkBkApplication {

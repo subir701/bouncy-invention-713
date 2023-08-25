@@ -39,7 +39,7 @@ public class AppConfig {
 			});
 		}).authorizeHttpRequests(auth -> auth
 				.requestMatchers("/swagger-ui*/**", "/v3/api-docs/**").permitAll()
-				.requestMatchers(HttpMethod.POST, "/customer/registerCustomer/", "/admin/registerAdmin").permitAll()
+				.requestMatchers(HttpMethod.POST, "/customers/registerCustomer", "/admin/registerAdmin").permitAll()
 				.requestMatchers("/customers/**").hasRole("USER")
 				.requestMatchers("/admin/**").hasRole("ADMIN")
 				.anyRequest().authenticated()).csrf(csrf -> csrf.disable())
