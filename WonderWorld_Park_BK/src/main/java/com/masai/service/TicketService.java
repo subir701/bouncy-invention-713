@@ -3,6 +3,7 @@ package com.masai.service;
 import java.util.List;
 
 import com.masai.DTO.TicketDTO;
+import com.masai.Exception.TicketException;
 import com.masai.model.Ticket;
 
 public interface TicketService {
@@ -22,5 +23,9 @@ public interface TicketService {
 	List<Ticket> getTicketBookingHistoryForDay(Integer customerId);
 
 	Double getTotalFair(Integer customerId);
+	
+	List<Ticket> viewAll()throws TicketException;
+	
+	Ticket getTicketById(Integer ticketId)throws TicketException;
 
 }
