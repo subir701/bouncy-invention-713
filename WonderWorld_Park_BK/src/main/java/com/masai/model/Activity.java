@@ -40,7 +40,7 @@ public class Activity {
 	
 	private String url;
 	
-	private Integer distance;
+	
 	
 	private Integer personCapacity;
 	
