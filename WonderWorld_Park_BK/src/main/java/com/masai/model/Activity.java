@@ -7,6 +7,8 @@ import java.util.List;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -40,7 +42,7 @@ public class Activity {
 	
 	private String url;
 	
-	private Integer distance;
+	
 	
 	private Integer personCapacity;
 	
@@ -56,6 +58,7 @@ public class Activity {
 	@Column(nullable = false)
 	private Boolean isDeleted;
 	
+	@JsonIgnore
 	@OneToMany(fetch = FetchType.EAGER, mappedBy = "activity", cascade = CascadeType.ALL)
 	private List<Ticket> tickets = new ArrayList<>();
 	
