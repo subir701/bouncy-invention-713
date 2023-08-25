@@ -42,6 +42,8 @@ public class Activity {
 	
 	private Integer personCapacity;
 	
+	private Integer distance;
+	
 	@CreationTimestamp
 	@Column(updatable = false)
 	private LocalDateTime createdOn;

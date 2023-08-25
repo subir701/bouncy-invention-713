@@ -52,7 +52,7 @@ public class TicketServiceImpl implements TicketService {
 		if(customer.isEmpty() || (customer.isPresent() && customer.get().getIsDeleted() == true))
 			
 			throw new CustomerException("User not found with userId: "+customerId);
-		System.out.println(ticketDTO.getVisitDate()+""+ticketDTO.getPersonCount());
+
 		LocalDate date = LocalDate.parse(ticketDTO.getVisitDate());
 		
 		if(date.isAfter(LocalDate.now()) || date.isEqual(LocalDate.now()))
@@ -71,7 +71,7 @@ public class TicketServiceImpl implements TicketService {
 			Ticket ticket = new Ticket(customer.get(),
 					                   activity.get(), 
 					                   date,
-					                   activity.get().getPrice()*ticketDTO.getPersonCount(),
+					                   (activity.get().getPrice()*ticketDTO.getPersonCount())+ (activity.get().getDistance()*10) ,
 					                   false,
 					                   ticketDTO.getPersonCount());
 			
@@ -110,7 +110,7 @@ public class TicketServiceImpl implements TicketService {
 			throw new TicketException("Can't modify, Ticket is expired");	
 		}
 		Ticket ticket = ticketOpt.get();
-		ticket.setPrice(ticketDTO.getPersonCount() * ticket.getActivity().getPrice());
+		ticket.setPrice((ticketDTO.getPersonCount() * ticket.getActivity().getPrice())+ (10* ticket.getActivity().getDistance()));
 		ticket.setPersonCount(ticketDTO.getPersonCount());
 		
 		LocalDate date = LocalDate.parse(ticketDTO.getVisitDate());
@@ -211,5 +211,38 @@ public class TicketServiceImpl implements TicketService {
 		
 		return t.stream().filter(tick->tick.getCustomer().getCustomerId()==customerId).toList();
 	}
+	
+	@Override
+	public List<Ticket> getTicketBookingHistoryForDay(Integer customerId) {
+     
+		Optional<Customer> customer = customerRepo.findById(customerId);
+		
+		if(customer.isEmpty() || (customer.isPresent() && customer.get().getIsDeleted() == true))
+			throw new CustomerException("User not found with userId: "+customerId);
+		
+		List<Ticket> t = ticketRepo.findAll();
+		if(t.isEmpty()) 
+			  throw new TicketException("Don't have Ticket booking History");
+		
+		return t.stream().filter(tick->tick.getCustomer().getCustomerId()==customerId && tick.getVisitDate().isBefore(LocalDate.now())).toList();
+	}
+	
+	@Override
+	public Double getTotalFair(Integer customerId)
+	{
+		List<Ticket> tickets = getTicketBookingHistoryForDay(customerId);
+		
+		
+		Double fair =0.0;
+	  
+		
+		for(Ticket t :tickets)
+		{
+			fair+=t.getPrice();
+		}
+		
+		return fair;
+	}
+	
 
 }
