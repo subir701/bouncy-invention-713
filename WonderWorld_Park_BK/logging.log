@@ -779,3 +779,7 @@ org.springframework.security.authentication.BadCredentialsException: Invalid Tok
 2023-08-26T15:14:39.252+05:30 DEBUG 17040 --- [http-nio-8888-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
 2023-08-26T15:14:39.254+05:30 DEBUG 17040 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /admin/registerAdmin
 2023-08-26T15:14:39.683+05:30  INFO 17040 --- [http-nio-8888-exec-2] com.masai.service.AdminServiceImpl       : Admin saved sucessfully
+2023-08-26T15:15:05.168+05:30 DEBUG 17040 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /admin/signin
+2023-08-26T15:15:05.699+05:30 DEBUG 17040 --- [http-nio-8888-exec-3] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-08-26T15:15:05.708+05:30 DEBUG 17040 --- [http-nio-8888-exec-3] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=sub@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2023-08-26T15:15:05.713+05:30 DEBUG 17040 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /admin/signin
