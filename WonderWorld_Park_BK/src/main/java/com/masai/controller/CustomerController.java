@@ -61,9 +61,10 @@ public class CustomerController {
 	}
 	
 	@GetMapping("/signin")
-	public ResponseEntity<String> logInUserHandler(Authentication auth) throws CustomerException {
+	public ResponseEntity<Customer> logInUserHandler(Authentication auth) throws CustomerException {
 		Customer custo = customerService.findByEmail(auth.getName()).get();
-		return new ResponseEntity<>(custo.getEmail() + " Logged In Successfully", HttpStatus.ACCEPTED);
+		
+		return new ResponseEntity<>(custo, HttpStatus.ACCEPTED);
 	}	
 	
 	

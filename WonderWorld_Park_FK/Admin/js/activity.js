@@ -1,5 +1,6 @@
 let activities = [];
 let mainHtml = document.getElementById("act");
+let btn= document.getElementById("logout");
 
 function fetchActivity() {
     const jwtToken = getCookie(); // Corrected JWT token retrieval getCookie("jwtToken")
@@ -37,10 +38,12 @@ function fetchActivity() {
 }
 
 function render(card) {
+    let count=1;
     let temp;
     temp = card.map(item => {
         
         return getCard(
+            count++,
             item.activityName,
             item.capacity,
             item.distance,
@@ -54,9 +57,11 @@ function render(card) {
     mainHtml.innerHTML = temp.join(" ");
 }
 
-function getCard(activityName, capacity, distance, price, url,isDeleted,activityId) {
+function getCard(count,activityName, capacity, distance, price, url,isDeleted,activityId) {
+    
     let card = `
     <tr>
+        <td>${count++}</td>
         <td>${activityName}</td>
         <td>${capacity}</td>
         <td>${distance}</td>
@@ -106,4 +111,10 @@ function getCookie() {
     return parts[1];
 }
 
+btn.addEventListener("click", logout)
+ 
+function logout(){
+    document.cookie = "name=Martin Roy;max-age=0";
+    window.location.href= "adminLogin.html";
+}
 fetchActivity();

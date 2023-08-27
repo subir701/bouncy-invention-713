@@ -107,6 +107,11 @@ public class AdminController {
 		return new ResponseEntity<Customer>(customerService.viewCustomerById(customerId),HttpStatus.OK);
 	}
 	
+	@DeleteMapping("/customers/delete/{customerId}")
+	public ResponseEntity<Customer> deleteCustomer(@PathVariable Integer customerId)throws CustomerException{
+		return new ResponseEntity<Customer>(customerService.deleteCustomer(customerId),HttpStatus.ACCEPTED);
+	}
+	
 	//Activity
 	@PostMapping("/activity/add")
 	public ResponseEntity<Activity> addActivity(@Valid @RequestBody Activity activity)throws ActivityException{

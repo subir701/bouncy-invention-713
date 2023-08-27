@@ -63,6 +63,7 @@ public class CustomerServiceImpl implements CustomerService{
 		
 		c.setIsDeleted(true);
 		c.setDeletionTime(LocalDateTime.now());
+		customerRepo.delete(c);
 		log.info("Customer deleted sucessfully");
 		
 		return c;

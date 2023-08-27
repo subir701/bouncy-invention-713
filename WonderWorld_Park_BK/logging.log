@@ -1204,3 +1204,396 @@ org.springframework.security.authentication.BadCredentialsException: Invalid Tok
 2023-08-27T16:27:08.709+05:30 DEBUG 25552 --- [http-nio-8888-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
 2023-08-27T16:27:12.663+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
 2023-08-27T16:27:12.670+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T16:31:04.228+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T16:31:04.231+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T16:31:04.249+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T17:07:52.083+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/ticket/getAllTicket
+2023-08-27T17:07:52.098+05:30 DEBUG 25552 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /admin/ticket/getAllTicket
+2023-08-27T17:07:52.118+05:30 DEBUG 25552 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /admin/ticket/getAllTicket
+2023-08-27T17:13:22.778+05:30 DEBUG 25552 --- [http-nio-8888-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/ticket/getAllTicket
+2023-08-27T17:13:22.781+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /admin/ticket/getAllTicket
+2023-08-27T17:13:22.786+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /admin/ticket/getAllTicket
+2023-08-27T17:14:11.281+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/ticket/getAllTicket
+2023-08-27T17:14:11.285+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /admin/ticket/getAllTicket
+2023-08-27T17:14:11.289+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /admin/ticket/getAllTicket
+2023-08-27T17:15:31.592+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/ticket/getAllTicket
+2023-08-27T17:15:31.603+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /admin/ticket/getAllTicket
+2023-08-27T17:15:31.608+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /admin/ticket/getAllTicket
+2023-08-27T17:18:11.128+05:30 DEBUG 25552 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/ticket/getAllTicket
+2023-08-27T17:18:11.131+05:30 DEBUG 25552 --- [http-nio-8888-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /admin/ticket/getAllTicket
+2023-08-27T17:18:11.137+05:30 DEBUG 25552 --- [http-nio-8888-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /admin/ticket/getAllTicket
+2023-08-27T17:21:08.841+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/ticket/getAllTicket
+2023-08-27T17:21:08.849+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /admin/ticket/getAllTicket
+2023-08-27T17:21:08.853+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /admin/ticket/getAllTicket
+2023-08-27T17:21:41.131+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/ticket/getAllTicket
+2023-08-27T17:21:41.135+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /admin/ticket/getAllTicket
+2023-08-27T17:21:41.139+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /admin/ticket/getAllTicket
+2023-08-27T17:22:54.964+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/ticket/getAllTicket
+2023-08-27T17:22:54.967+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /admin/ticket/getAllTicket
+2023-08-27T17:22:54.978+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /admin/ticket/getAllTicket
+2023-08-27T17:24:50.152+05:30 DEBUG 25552 --- [http-nio-8888-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/ticket/getAllTicket
+2023-08-27T17:24:50.162+05:30 DEBUG 25552 --- [http-nio-8888-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /admin/ticket/getAllTicket
+2023-08-27T17:24:50.169+05:30 DEBUG 25552 --- [http-nio-8888-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /admin/ticket/getAllTicket
+2023-08-27T17:26:04.364+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/ticket/getAllTicket
+2023-08-27T17:26:04.374+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /admin/ticket/getAllTicket
+2023-08-27T17:26:04.381+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /admin/ticket/getAllTicket
+2023-08-27T17:27:31.280+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/ticket/getAllTicket
+2023-08-27T17:27:31.286+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /admin/ticket/getAllTicket
+2023-08-27T17:27:31.289+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /admin/ticket/getAllTicket
+2023-08-27T17:54:57.596+05:30 DEBUG 25552 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/ticket/getAllTicket
+2023-08-27T17:54:57.601+05:30 DEBUG 25552 --- [http-nio-8888-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /admin/ticket/getAllTicket
+2023-08-27T17:54:57.606+05:30 DEBUG 25552 --- [http-nio-8888-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /admin/ticket/getAllTicket
+2023-08-27T17:55:17.683+05:30 DEBUG 25552 --- [http-nio-8888-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/ticket/getAllTicket
+2023-08-27T17:55:17.696+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /admin/ticket/getAllTicket
+2023-08-27T17:55:17.700+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /admin/ticket/getAllTicket
+2023-08-27T18:10:37.345+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/ticket/getAllTicket
+2023-08-27T18:10:37.351+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /admin/ticket/getAllTicket
+2023-08-27T18:10:37.357+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /admin/ticket/getAllTicket
+2023-08-27T18:11:17.545+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/customers
+2023-08-27T18:11:17.552+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /admin/customers
+2023-08-27T18:11:17.556+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /admin/customers
+2023-08-27T18:15:22.933+05:30  INFO 25552 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-27T18:15:23.176+05:30  INFO 25552 --- [Thread-132] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-27T18:15:23.199+05:30  INFO 25552 --- [Thread-132] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-08-27T18:15:23.329+05:30  INFO 25552 --- [Thread-132] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-27T18:15:23.377+05:30  INFO 25552 --- [Thread-132] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Shutdown initiated...
+2023-08-27T18:15:23.393+05:30  INFO 25552 --- [Thread-132] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Shutdown completed.
+2023-08-27T18:15:24.900+05:30  INFO 25552 --- [restartedMain] com.masai.WonderWorldParkBkApplication   : Starting WonderWorldParkBkApplication using Java 17.0.7 with PID 25552 (C:\Users\sumit\OneDrive\Desktop\project\bouncy-invention-713\WonderWorld_Park_BK\target\classes started by sumit in C:\Users\sumit\OneDrive\Desktop\project\bouncy-invention-713\WonderWorld_Park_BK)
+2023-08-27T18:15:24.900+05:30  INFO 25552 --- [restartedMain] com.masai.WonderWorldParkBkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-27T18:15:25.293+05:30  INFO 25552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-27T18:15:25.326+05:30  INFO 25552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 4 JPA repository interfaces.
+2023-08-27T18:15:25.497+05:30  INFO 25552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2023-08-27T18:15:25.497+05:30  INFO 25552 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-27T18:15:25.497+05:30  INFO 25552 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-27T18:15:25.538+05:30  INFO 25552 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-27T18:15:25.538+05:30  INFO 25552 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 631 ms
+2023-08-27T18:15:25.613+05:30  INFO 25552 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-27T18:15:25.627+05:30  INFO 25552 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-27T18:15:25.628+05:30  INFO 25552 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-27T18:15:25.633+05:30  INFO 25552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Starting...
+2023-08-27T18:15:25.659+05:30  INFO 25552 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-33 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4cbeb9c5
+2023-08-27T18:15:25.659+05:30  INFO 25552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Start completed.
+2023-08-27T18:15:25.699+05:30  INFO 25552 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-27T18:15:25.886+05:30  INFO 25552 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-27T18:15:26.393+05:30  INFO 25552 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-27T18:15:26.781+05:30  WARN 25552 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-27T18:15:27.056+05:30  INFO 25552 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1c3be1b5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6bfe88c5, org.springframework.security.web.context.SecurityContextHolderFilter@5c9dfd24, org.springframework.security.web.header.HeaderWriterFilter@6184344e, org.springframework.web.filter.CorsFilter@42bbfcbe, org.springframework.security.web.authentication.logout.LogoutFilter@2536c7ec, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2d808d81, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@653046b4, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@486219f, com.masai.security.JwtTokenValidatorFilter@47735ef3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2d0d6ed8, com.masai.security.JwtTokenGeneratorFilter@58d45e78, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@44ac9b62, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4cae1fd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@451717d0, org.springframework.security.web.session.SessionManagementFilter@23784c7c, org.springframework.security.web.access.ExceptionTranslationFilter@52c94c11, org.springframework.security.web.access.intercept.AuthorizationFilter@4e3720af]
+2023-08-27T18:15:27.277+05:30  INFO 25552 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-27T18:15:27.316+05:30  INFO 25552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2023-08-27T18:15:27.333+05:30  INFO 25552 --- [restartedMain] com.masai.WonderWorldParkBkApplication   : Started WonderWorldParkBkApplication in 2.486 seconds (process running for 25181.824)
+2023-08-27T18:15:27.341+05:30  INFO 25552 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-27T18:19:24.512+05:30  INFO 25552 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-27T18:19:24.513+05:30  INFO 25552 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-27T18:19:24.521+05:30  INFO 25552 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2023-08-27T18:19:24.522+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/customers
+2023-08-27T18:19:24.527+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /admin/customers
+2023-08-27T18:19:24.542+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /admin/customers
+2023-08-27T18:19:32.457+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/customers
+2023-08-27T18:19:32.498+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /admin/customers
+2023-08-27T18:19:32.505+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /admin/customers
+2023-08-27T18:19:34.691+05:30 DEBUG 25552 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/customers/delete/1
+2023-08-27T18:19:34.702+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Securing DELETE /admin/customers/delete/1
+2023-08-27T18:19:34.706+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Secured DELETE /admin/customers/delete/1
+2023-08-27T18:19:34.719+05:30  INFO 25552 --- [http-nio-8888-exec-10] com.masai.service.CustomerServiceImpl    : Customer deleted sucessfully
+2023-08-27T18:19:34.726+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /admin/customers
+2023-08-27T18:19:34.732+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /admin/customers
+2023-08-27T18:19:44.985+05:30 DEBUG 25552 --- [http-nio-8888-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/customers/delete/4
+2023-08-27T18:19:45.002+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Securing DELETE /admin/customers/delete/4
+2023-08-27T18:19:45.007+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Secured DELETE /admin/customers/delete/4
+2023-08-27T18:19:45.013+05:30  INFO 25552 --- [http-nio-8888-exec-1] com.masai.service.CustomerServiceImpl    : Customer deleted sucessfully
+2023-08-27T18:19:45.020+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/customers
+2023-08-27T18:19:45.023+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /admin/customers
+2023-08-27T18:19:45.026+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /admin/customers
+2023-08-27T18:19:48.340+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /admin/customers
+2023-08-27T18:19:48.347+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /admin/customers
+2023-08-27T18:20:59.668+05:30  INFO 25552 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-27T18:20:59.744+05:30  INFO 25552 --- [Thread-136] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-27T18:20:59.745+05:30  INFO 25552 --- [Thread-136] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-08-27T18:20:59.755+05:30  INFO 25552 --- [Thread-136] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-27T18:20:59.756+05:30  INFO 25552 --- [Thread-136] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Shutdown initiated...
+2023-08-27T18:20:59.770+05:30  INFO 25552 --- [Thread-136] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Shutdown completed.
+2023-08-27T18:21:00.052+05:30  INFO 25552 --- [restartedMain] com.masai.WonderWorldParkBkApplication   : Starting WonderWorldParkBkApplication using Java 17.0.7 with PID 25552 (C:\Users\sumit\OneDrive\Desktop\project\bouncy-invention-713\WonderWorld_Park_BK\target\classes started by sumit in C:\Users\sumit\OneDrive\Desktop\project\bouncy-invention-713\WonderWorld_Park_BK)
+2023-08-27T18:21:00.054+05:30  INFO 25552 --- [restartedMain] com.masai.WonderWorldParkBkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-27T18:21:00.440+05:30  INFO 25552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-27T18:21:00.466+05:30  INFO 25552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 4 JPA repository interfaces.
+2023-08-27T18:21:00.616+05:30  INFO 25552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2023-08-27T18:21:00.617+05:30  INFO 25552 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-27T18:21:00.617+05:30  INFO 25552 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-27T18:21:00.645+05:30  INFO 25552 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-27T18:21:00.645+05:30  INFO 25552 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 578 ms
+2023-08-27T18:21:00.741+05:30  INFO 25552 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-27T18:21:00.757+05:30  INFO 25552 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-27T18:21:00.757+05:30  INFO 25552 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-27T18:21:00.760+05:30  INFO 25552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-34 - Starting...
+2023-08-27T18:21:00.779+05:30  INFO 25552 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-34 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5346dfc3
+2023-08-27T18:21:00.780+05:30  INFO 25552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-34 - Start completed.
+2023-08-27T18:21:00.810+05:30  INFO 25552 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-27T18:21:00.928+05:30  INFO 25552 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-27T18:21:01.326+05:30  INFO 25552 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-27T18:21:02.029+05:30  WARN 25552 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-27T18:21:02.604+05:30  INFO 25552 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4b563472, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@46a72fab, org.springframework.security.web.context.SecurityContextHolderFilter@b23f9e, org.springframework.security.web.header.HeaderWriterFilter@6ef8bb74, org.springframework.web.filter.CorsFilter@ba67965, org.springframework.security.web.authentication.logout.LogoutFilter@37858bce, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@fd84298, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4cafacbd, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2381a5e9, com.masai.security.JwtTokenValidatorFilter@590ef04f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5c1e822a, com.masai.security.JwtTokenGeneratorFilter@262b56b2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5470f8b7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f78ca56, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1e7e7e43, org.springframework.security.web.session.SessionManagementFilter@514c4509, org.springframework.security.web.access.ExceptionTranslationFilter@3d9d216e, org.springframework.security.web.access.intercept.AuthorizationFilter@794e964d]
+2023-08-27T18:21:02.853+05:30  INFO 25552 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-27T18:21:02.879+05:30  INFO 25552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2023-08-27T18:21:02.917+05:30  INFO 25552 --- [restartedMain] com.masai.WonderWorldParkBkApplication   : Started WonderWorldParkBkApplication in 2.983 seconds (process running for 25517.408)
+2023-08-27T18:21:02.925+05:30  INFO 25552 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-27T18:21:06.244+05:30  INFO 25552 --- [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-27T18:21:06.244+05:30  INFO 25552 --- [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-27T18:21:06.248+05:30  INFO 25552 --- [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2023-08-27T18:21:06.249+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/customers/delete/1
+2023-08-27T18:21:06.253+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Securing DELETE /admin/customers/delete/1
+2023-08-27T18:21:06.259+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Secured DELETE /admin/customers/delete/1
+2023-08-27T18:21:06.280+05:30  INFO 25552 --- [http-nio-8888-exec-1] com.masai.service.CustomerServiceImpl    : Customer deleted sucessfully
+2023-08-27T18:21:06.287+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/customers
+2023-08-27T18:21:06.290+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /admin/customers
+2023-08-27T18:21:06.294+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /admin/customers
+2023-08-27T19:59:12.738+05:30  WARN 25552 --- [HikariPool-34 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-34 - Thread starvation or clock leap detected (housekeeper delta=1h7m41s438ms155µs).
+2023-08-27T20:14:37.804+05:30 DEBUG 25552 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/signin
+2023-08-27T20:14:37.829+05:30 DEBUG 25552 --- [http-nio-8888-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /admin/signin
+2023-08-27T20:14:38.307+05:30 DEBUG 25552 --- [http-nio-8888-exec-7] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-08-27T20:14:38.317+05:30 DEBUG 25552 --- [http-nio-8888-exec-7] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=sub@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2023-08-27T20:14:38.368+05:30 DEBUG 25552 --- [http-nio-8888-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /admin/signin
+2023-08-27T20:14:51.786+05:30 DEBUG 25552 --- [http-nio-8888-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:14:51.812+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:14:51.830+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:15:21.426+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:15:21.440+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:15:21.444+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:15:26.906+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:15:26.910+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:15:26.915+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:16:18.739+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:16:18.745+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:16:18.753+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:16:30.481+05:30 DEBUG 25552 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:16:30.492+05:30 DEBUG 25552 --- [http-nio-8888-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:16:30.497+05:30 DEBUG 25552 --- [http-nio-8888-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:19:09.140+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:19:09.143+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:19:09.156+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:22:11.840+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:22:11.844+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:22:11.851+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:22:20.526+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/customers
+2023-08-27T20:22:20.532+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /admin/customers
+2023-08-27T20:22:20.537+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /admin/customers
+2023-08-27T20:22:23.639+05:30 DEBUG 25552 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:22:23.645+05:30 DEBUG 25552 --- [http-nio-8888-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:22:23.652+05:30 DEBUG 25552 --- [http-nio-8888-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:22:25.157+05:30 DEBUG 25552 --- [http-nio-8888-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/ticket/getAllTicket
+2023-08-27T20:22:25.166+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /admin/ticket/getAllTicket
+2023-08-27T20:22:25.171+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /admin/ticket/getAllTicket
+2023-08-27T20:22:27.928+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:22:27.934+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:22:53.439+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:22:53.449+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:22:53.452+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:23:45.526+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:23:45.533+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:23:45.537+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:24:21.903+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:24:21.907+05:30 DEBUG 25552 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:24:21.913+05:30 DEBUG 25552 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:24:35.571+05:30 DEBUG 25552 --- [http-nio-8888-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:24:35.581+05:30 DEBUG 25552 --- [http-nio-8888-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:24:35.585+05:30 DEBUG 25552 --- [http-nio-8888-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:28:42.552+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:28:42.557+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:28:42.562+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:28:45.026+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:28:45.030+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:31:30.427+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:31:30.431+05:30 DEBUG 25552 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:31:30.434+05:30 DEBUG 25552 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:40:05.558+05:30 DEBUG 25552 --- [http-nio-8888-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:40:05.566+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:40:05.570+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:40:41.413+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/customers
+2023-08-27T20:40:41.440+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /admin/customers
+2023-08-27T20:40:41.444+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /admin/customers
+2023-08-27T20:40:54.474+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/signin
+2023-08-27T20:40:54.477+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /admin/signin
+2023-08-27T20:40:54.632+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-08-27T20:40:54.632+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=sub@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2023-08-27T20:40:54.635+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /admin/signin
+2023-08-27T20:41:16.281+05:30 DEBUG 25552 --- [http-nio-8888-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/signin
+2023-08-27T20:41:16.285+05:30 DEBUG 25552 --- [http-nio-8888-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /admin/signin
+2023-08-27T20:41:16.434+05:30 DEBUG 25552 --- [http-nio-8888-exec-8] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-08-27T20:41:16.434+05:30 DEBUG 25552 --- [http-nio-8888-exec-8] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=sub@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2023-08-27T20:41:16.435+05:30 DEBUG 25552 --- [http-nio-8888-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /admin/signin
+2023-08-27T20:41:16.606+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:41:16.611+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:41:16.620+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:41:24.026+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/customers
+2023-08-27T20:41:24.037+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /admin/customers
+2023-08-27T20:41:24.056+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /admin/customers
+2023-08-27T20:41:26.611+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:41:26.615+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:41:26.622+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:41:28.355+05:30 DEBUG 25552 --- [http-nio-8888-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/ticket/getAllTicket
+2023-08-27T20:41:28.371+05:30 DEBUG 25552 --- [http-nio-8888-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /admin/ticket/getAllTicket
+2023-08-27T20:41:28.374+05:30 DEBUG 25552 --- [http-nio-8888-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /admin/ticket/getAllTicket
+2023-08-27T20:41:31.551+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:41:31.557+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:41:38.148+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:41:38.162+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:41:38.167+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:41:48.989+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:41:49.006+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T20:41:49.014+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:04:35.538+05:30 DEBUG 25552 --- [http-nio-8888-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:04:35.542+05:30 DEBUG 25552 --- [http-nio-8888-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:04:35.549+05:30 DEBUG 25552 --- [http-nio-8888-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:05:26.909+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/signin
+2023-08-27T21:05:26.915+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /admin/signin
+2023-08-27T21:05:27.043+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-08-27T21:05:27.043+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=sub@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2023-08-27T21:05:27.044+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /admin/signin
+2023-08-27T21:05:27.155+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:05:27.159+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:05:27.162+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:06:27.467+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:06:27.471+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:06:27.476+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:06:35.998+05:30 DEBUG 25552 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/signin
+2023-08-27T21:06:36.001+05:30 DEBUG 25552 --- [http-nio-8888-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /admin/signin
+2023-08-27T21:06:36.127+05:30 DEBUG 25552 --- [http-nio-8888-exec-7] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-08-27T21:06:36.127+05:30 DEBUG 25552 --- [http-nio-8888-exec-7] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=sub@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2023-08-27T21:06:36.128+05:30 DEBUG 25552 --- [http-nio-8888-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /admin/signin
+2023-08-27T21:06:36.214+05:30 DEBUG 25552 --- [http-nio-8888-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:06:36.219+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:06:36.223+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:06:57.717+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/signin
+2023-08-27T21:06:57.720+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /admin/signin
+2023-08-27T21:06:57.861+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-08-27T21:06:57.862+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=sub@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2023-08-27T21:06:57.863+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /admin/signin
+2023-08-27T21:06:57.989+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:06:57.994+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:06:57.998+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:07:16.999+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/signin
+2023-08-27T21:07:17.002+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /admin/signin
+2023-08-27T21:07:17.126+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-08-27T21:07:17.126+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=sub@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2023-08-27T21:07:17.127+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /admin/signin
+2023-08-27T21:07:17.242+05:30 DEBUG 25552 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:07:17.252+05:30 DEBUG 25552 --- [http-nio-8888-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:07:17.258+05:30 DEBUG 25552 --- [http-nio-8888-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:09:28.500+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/signin
+2023-08-27T21:09:28.504+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /admin/signin
+2023-08-27T21:09:28.642+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-08-27T21:09:28.642+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=sub@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2023-08-27T21:09:28.644+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /admin/signin
+2023-08-27T21:09:28.759+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:09:28.770+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:09:28.774+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:11:22.652+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:11:22.657+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:11:22.660+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:13:59.437+05:30 DEBUG 25552 --- [http-nio-8888-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:13:59.443+05:30 DEBUG 25552 --- [http-nio-8888-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:13:59.445+05:30 DEBUG 25552 --- [http-nio-8888-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:14:10.944+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:14:10.951+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:14:10.958+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:21:25.654+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:21:25.659+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:21:25.662+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:22:24.747+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:22:24.751+05:30 DEBUG 25552 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:22:24.754+05:30 DEBUG 25552 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:24:40.409+05:30 DEBUG 25552 --- [http-nio-8888-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:24:40.411+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:24:40.414+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:27:34.468+05:30  INFO 25552 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-27T21:27:34.713+05:30  INFO 25552 --- [Thread-140] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-27T21:27:34.745+05:30  INFO 25552 --- [Thread-140] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-08-27T21:27:34.932+05:30  INFO 25552 --- [Thread-140] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-27T21:27:34.995+05:30  INFO 25552 --- [Thread-140] com.zaxxer.hikari.HikariDataSource       : HikariPool-34 - Shutdown initiated...
+2023-08-27T21:27:35.019+05:30  INFO 25552 --- [Thread-140] com.zaxxer.hikari.HikariDataSource       : HikariPool-34 - Shutdown completed.
+2023-08-27T21:27:36.568+05:30  INFO 25552 --- [restartedMain] com.masai.WonderWorldParkBkApplication   : Starting WonderWorldParkBkApplication using Java 17.0.7 with PID 25552 (C:\Users\sumit\OneDrive\Desktop\project\bouncy-invention-713\WonderWorld_Park_BK\target\classes started by sumit in C:\Users\sumit\OneDrive\Desktop\project\bouncy-invention-713\WonderWorld_Park_BK)
+2023-08-27T21:27:36.568+05:30  INFO 25552 --- [restartedMain] com.masai.WonderWorldParkBkApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-08-27T21:27:37.212+05:30  INFO 25552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-27T21:27:37.270+05:30  INFO 25552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 4 JPA repository interfaces.
+2023-08-27T21:27:37.497+05:30  INFO 25552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2023-08-27T21:27:37.498+05:30  INFO 25552 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-27T21:27:37.499+05:30  INFO 25552 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-27T21:27:37.549+05:30  INFO 25552 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-27T21:27:37.549+05:30  INFO 25552 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 974 ms
+2023-08-27T21:27:37.648+05:30  INFO 25552 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-27T21:27:37.658+05:30  INFO 25552 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-27T21:27:37.658+05:30  INFO 25552 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-27T21:27:37.659+05:30  INFO 25552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-35 - Starting...
+2023-08-27T21:27:37.677+05:30  INFO 25552 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-35 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6a6907be
+2023-08-27T21:27:37.677+05:30  INFO 25552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-35 - Start completed.
+2023-08-27T21:27:37.697+05:30  INFO 25552 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-08-27T21:27:37.856+05:30  INFO 25552 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-27T21:27:38.302+05:30  INFO 25552 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-27T21:27:38.484+05:30  WARN 25552 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-27T21:27:38.589+05:30  INFO 25552 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1adde710, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5dd9f6af, org.springframework.security.web.context.SecurityContextHolderFilter@3b72e59c, org.springframework.security.web.header.HeaderWriterFilter@7224736a, org.springframework.web.filter.CorsFilter@34b838fe, org.springframework.security.web.authentication.logout.LogoutFilter@78fe55, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@46a5e5b7, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@9cd86cc, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@306ae3f2, com.masai.security.JwtTokenValidatorFilter@457a7788, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@740e0b10, com.masai.security.JwtTokenGeneratorFilter@57049d06, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6e1ca001, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ff2218b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@228e20d0, org.springframework.security.web.session.SessionManagementFilter@3bc1b900, org.springframework.security.web.access.ExceptionTranslationFilter@68f7b99a, org.springframework.security.web.access.intercept.AuthorizationFilter@140a7935]
+2023-08-27T21:27:38.691+05:30  INFO 25552 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-27T21:27:38.741+05:30  INFO 25552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2023-08-27T21:27:38.754+05:30  INFO 25552 --- [restartedMain] com.masai.WonderWorldParkBkApplication   : Started WonderWorldParkBkApplication in 2.299 seconds (process running for 36713.248)
+2023-08-27T21:27:38.757+05:30  INFO 25552 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-27T21:27:47.040+05:30  INFO 25552 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-27T21:27:47.041+05:30  INFO 25552 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-27T21:27:47.042+05:30  INFO 25552 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-08-27T21:27:47.042+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/index.html
+2023-08-27T21:27:47.043+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-08-27T21:27:47.045+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/index.html
+2023-08-27T21:27:47.123+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-bundle.js
+2023-08-27T21:27:47.124+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-08-27T21:27:47.125+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-bundle.js
+2023-08-27T21:27:47.126+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-standalone-preset.js
+2023-08-27T21:27:47.126+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-08-27T21:27:47.127+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-standalone-preset.js
+2023-08-27T21:27:47.128+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-initializer.js
+2023-08-27T21:27:47.129+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-08-27T21:27:47.130+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-initializer.js
+2023-08-27T21:27:47.847+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /v3/api-docs/swagger-config
+2023-08-27T21:27:47.848+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-08-27T21:27:47.849+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /v3/api-docs/swagger-config
+2023-08-27T21:27:47.889+05:30 DEBUG 25552 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /v3/api-docs
+2023-08-27T21:27:47.889+05:30 DEBUG 25552 --- [http-nio-8888-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-08-27T21:27:47.890+05:30 DEBUG 25552 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /v3/api-docs
+2023-08-27T21:27:48.305+05:30  INFO 25552 --- [http-nio-8888-exec-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 410 ms
+2023-08-27T21:28:38.326+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /customers/registerCustomer
+2023-08-27T21:28:38.327+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-08-27T21:28:38.327+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /customers/registerCustomer
+2023-08-27T21:28:38.964+05:30  INFO 25552 --- [http-nio-8888-exec-10] com.masai.service.CustomerServiceImpl    : Customer is saved sucessfully
+2023-08-27T21:29:02.294+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /customers/signin
+2023-08-27T21:29:02.593+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-08-27T21:29:02.593+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=adhikari181@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2023-08-27T21:29:02.599+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /customers/signin
+2023-08-27T21:29:15.584+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-bundle.js.map
+2023-08-27T21:29:15.585+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-08-27T21:29:15.586+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-standalone-preset.js.map
+2023-08-27T21:29:15.586+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-08-27T21:29:15.586+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-bundle.js.map
+2023-08-27T21:29:15.587+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-standalone-preset.js.map
+2023-08-27T21:29:15.702+05:30 DEBUG 25552 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui.css.map
+2023-08-27T21:29:15.703+05:30 DEBUG 25552 --- [http-nio-8888-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-08-27T21:29:15.703+05:30 DEBUG 25552 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui.css.map
+2023-08-27T21:30:50.051+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:30:50.057+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:30:50.063+05:30 DEBUG 25552 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:32:02.046+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:32:02.049+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:32:02.052+05:30 DEBUG 25552 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:32:14.491+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:32:14.495+05:30 DEBUG 25552 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:32:14.497+05:30 DEBUG 25552 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-27T21:32:59.603+05:30 DEBUG 25552 --- [http-nio-8888-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /customers/signin
+2023-08-27T21:32:59.606+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /customers/signin
+2023-08-27T21:32:59.731+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-08-27T21:32:59.731+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=adhikari181@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2023-08-27T21:32:59.732+05:30 DEBUG 25552 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /customers/signin
+2023-08-27T21:37:08.411+05:30 DEBUG 25552 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /customers/signin
+2023-08-27T21:37:08.419+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /customers/signin
+2023-08-27T21:37:08.552+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-08-27T21:37:08.553+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=adhikari181@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2023-08-27T21:37:08.554+05:30 DEBUG 25552 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /customers/signin
+2023-08-27T21:38:17.394+05:30 DEBUG 25552 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /customers/signin
+2023-08-27T21:38:17.397+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /customers/signin
+2023-08-27T21:38:17.521+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-08-27T21:38:17.522+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=adhikari181@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2023-08-27T21:38:17.523+05:30 DEBUG 25552 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /customers/signin

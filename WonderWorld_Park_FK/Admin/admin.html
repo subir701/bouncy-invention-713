@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
     <title>Admin</title>
      <!-- Make sure this path is correct -->
 </head>
 <body>
+    <div id="sideBar">
+        <div class="tabs">
+            <a href="admin.html"><h4>Activities</h4></a>
+        </div>
+        <div class="tabs">
+           <a href="adminCustomer.html"> <h4>Customers</h4></a>
+        </div>
+        <div class="tabs">
+            <a href="adminTicket.html"><h4>Tickets</h4></a>
+        </div>
+        <div class="tab" id="logout">
+            <a href="#"><h4>Logout</h4></a>
+        </div>
+    </div>
     <div id="data">
         <table>
             <thead>
@@ -27,6 +42,8 @@
             </tbody>
         </table>
     </div>
+    <a href="addActivity.html"><button id="add"><i class="fa-solid fa-plus"></i></button></a>
 </body>
-<script src="/js/activity.js"></script>
+<script src="./js/activity.js"></script>
+<link rel="stylesheet" href="./css/admin.css">
 </html>
