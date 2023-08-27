@@ -18,6 +18,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
@@ -43,6 +44,12 @@ public class JwtTokenGeneratorFilter extends OncePerRequestFilter {
                     .signWith(key).compact();
                        
             response.setHeader(SecurityConstants.JWT_HEADER, jwt);
+            
+            Cookie jwtCookie = new Cookie(SecurityConstants.JWT_HEADER, jwt); // Replace jwt with your actual JWT token
+            jwtCookie.setMaxAge((int) (System.currentTimeMillis() + 30000000)); // Set cookie expiration time
+            jwtCookie.setPath("/");
+            
+            response.addCookie(jwtCookie);
  
         }
 

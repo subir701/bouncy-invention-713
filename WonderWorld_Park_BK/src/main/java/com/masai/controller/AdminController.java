@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -29,6 +30,8 @@ import com.masai.model.Activity;
 import com.masai.model.Admin;
 import com.masai.model.Customer;
 import com.masai.model.Ticket;
+import com.masai.repository.AdminRepository;
+import com.masai.security.JwtToken;
 import com.masai.service.ActivityService;
 import com.masai.service.AdminService;
 import com.masai.service.CustomerService;
@@ -60,6 +63,8 @@ public class AdminController {
 	private PasswordEncoder passwordEncoder;
 	
 	
+	
+	
 	@PostMapping("/registerAdmin")
 	public ResponseEntity<Admin> createAdmin(@Valid @RequestBody Admin admin) throws AdminException{
 		admin.setIsDeleted(false);
@@ -70,9 +75,11 @@ public class AdminController {
 	
 	@GetMapping("/signin")
 	public ResponseEntity<String> logInUserHandler(Authentication auth) throws AdminException {
+		
 		Admin admin = adminService.findByEmail(auth.getName()).get();
 		return new ResponseEntity<>(admin.getEmail() + " Logged In Successfully", HttpStatus.ACCEPTED);
 	}	
+	
 	
 	
 	@DeleteMapping("/delete/{adminId}")
@@ -114,6 +121,7 @@ public class AdminController {
 	
 	@DeleteMapping("/activity/delete/{activityId}")
 	public ResponseEntity<Activity> deleteActivity(@PathVariable Integer activityId)throws ActivityException{
+		
 		return new ResponseEntity<Activity>(activityService.deletedActivity(activityId),HttpStatus.ACCEPTED);
 	}
 	

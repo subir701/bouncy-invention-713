@@ -38,7 +38,7 @@ public class ActivityServiceImpl implements ActivityService {
 
 	@Override
 	public Activity updateActivity(Activity activity, Integer activityId) throws ActivityException {
-		if(activity!=null)throw new ActivityException("Activity is null");
+		if(activity==null)throw new ActivityException("Activity is null");
 		log.debug("Calling findById method from ActivityJpa Repository");
 		Optional<Activity> temp=activityRepo.findById(activityId);
 		if(temp.isPresent()) {
@@ -46,8 +46,9 @@ public class ActivityServiceImpl implements ActivityService {
 			existingActivity.setDistance(activity.getDistance());
 			existingActivity.setPrice(activity.getPrice());
 			existingActivity.setActivityName(activity.getActivityName());
+			Activity main=activityRepo.save(existingActivity);
 			log.info("Activity updated sucessfully");
-			return existingActivity;
+			return main;
 		}else {
 			throw new ActivityException("No activity found");
 		}
@@ -57,10 +58,12 @@ public class ActivityServiceImpl implements ActivityService {
 	@Override
 	public Activity deletedActivity(Integer activityId) throws ActivityException {
 		log.debug("Calling findById method from ActivityJpa Repository");
+		
 		Optional<Activity> temp=activityRepo.findById(activityId);
 		if(temp.isPresent()) {
 			Activity existingActivity=temp.get();
 			existingActivity.setIsDeleted(true);
+			activityRepo.delete(existingActivity);
 			log.info("Activity deleted sucessfully");
 			return existingActivity;
 		}else {

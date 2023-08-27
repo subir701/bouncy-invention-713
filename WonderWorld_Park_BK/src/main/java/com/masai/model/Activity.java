@@ -59,7 +59,7 @@ public class Activity {
 	private Boolean isDeleted;
 	
 	@JsonIgnore
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "activity", cascade = CascadeType.ALL)
+	@OneToMany( mappedBy = "activity", cascade = CascadeType.ALL)
 	private List<Ticket> tickets = new ArrayList<>();
 
 	public Activity(String activityName, Double price, String url, Integer personCapacity, Integer distance,

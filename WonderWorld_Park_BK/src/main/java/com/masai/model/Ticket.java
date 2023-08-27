@@ -35,11 +35,11 @@ public class Ticket {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer ticketId;
 	
-	@ManyToOne( fetch = FetchType.EAGER)
+	@ManyToOne(cascade =  {CascadeType.PERSIST, CascadeType.MERGE})
 	@JoinColumn(name = "customerId")
 	private Customer customer;
 	
-	@ManyToOne( fetch = FetchType.EAGER)
+	@ManyToOne( cascade = {CascadeType.PERSIST, CascadeType.MERGE})
 	@JoinColumn(name = "activityId")
 	private Activity activity;
 	
