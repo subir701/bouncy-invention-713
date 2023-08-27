@@ -1,4 +1,4 @@
-<h1 align="center"> ⚡️ WondrWorld ⚡️</h1>
+<h1 align="center"> ⚡️ WondrWord ⚡️</h1>
 
 
 ![Logo](./Wonderland_Frontend/Images/image.png)
@@ -9,11 +9,11 @@
 
 ## Acknowledgements:
 
-Wondr Wrold, the amusement park web application, built with Java Spring Boot, HTML, CSS, and JavaScript, helps visitors to plan their trip, purchase tickets for different activities , and learn about park attractions. It features user authentication, user-friendly interfaces. The application provides a seamless experience for visitors, making their trip more enjoyable.
+Wondr Wrod, the amusement park web application, built with Java Spring Boot, HTML, CSS, and JavaScript, helps visitors to plan their trip, purchase tickets for different activities , and learn about park attractions. It features user authentication, user-friendly interfaces. The application provides a seamless experience for visitors, making their trip more enjoyable.
 ## Functions:
 
 ## Base:
-- WondrWorldApplication
+- WondrWordApplication
 
 ## Controller:
 - AdminController
