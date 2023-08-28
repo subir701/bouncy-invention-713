@@ -1240,3 +1240,111 @@ org.springframework.security.authentication.BadCredentialsException: Invalid Tok
 2023-08-28T13:02:59.614+05:30 DEBUG 17312 --- [http-nio-8888-exec-3] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
 2023-08-28T13:02:59.614+05:30 DEBUG 17312 --- [http-nio-8888-exec-3] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=newCustomer@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
 2023-08-28T13:02:59.614+05:30 DEBUG 17312 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /customers/signin
+2023-08-28T13:08:41.390+05:30 DEBUG 17312 --- [http-nio-8888-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/registerAdmin
+2023-08-28T13:08:41.397+05:30 DEBUG 17312 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /admin/registerAdmin
+2023-08-28T13:08:41.398+05:30 DEBUG 17312 --- [http-nio-8888-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-08-28T13:08:41.399+05:30 DEBUG 17312 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /admin/registerAdmin
+2023-08-28T13:08:41.514+05:30  INFO 17312 --- [http-nio-8888-exec-4] com.masai.service.AdminServiceImpl       : Admin saved sucessfully
+2023-08-28T13:09:26.143+05:30 DEBUG 17312 --- [http-nio-8888-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/signin
+2023-08-28T13:09:26.149+05:30 DEBUG 17312 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /admin/signin
+2023-08-28T13:09:26.253+05:30 DEBUG 17312 --- [http-nio-8888-exec-9] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-08-28T13:09:26.254+05:30 DEBUG 17312 --- [http-nio-8888-exec-9] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=newA@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2023-08-28T13:09:26.257+05:30 DEBUG 17312 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /admin/signin
+2023-08-28T13:09:26.315+05:30 DEBUG 17312 --- [http-nio-8888-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-28T13:09:26.324+05:30 DEBUG 17312 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /admin/activity/all?pageNumber=0&pageSize=6
+2023-08-28T13:09:26.333+05:30 ERROR 17312 --- [http-nio-8888-exec-10] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+org.springframework.security.authentication.BadCredentialsException: Invalid Token received..
+	at com.masai.security.JwtTokenValidatorFilter.doFilterInternal(JwtTokenValidatorFilter.java:49) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:58) ~[spring-security-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:188) ~[spring-security-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:174) ~[spring-security-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227) ~[spring-security-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.1.2.jar:6.1.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.11.jar:10.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.11.jar:10.1.11]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.11.jar:10.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.11.jar:10.1.11]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.11.jar:10.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.11.jar:10.1.11]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.11.jar:10.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.11.jar:10.1.11]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.11.jar:10.1.11]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.11.jar:10.1.11]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.11.jar:10.1.11]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.11.jar:10.1.11]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.11.jar:10.1.11]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.11.jar:10.1.11]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.11.jar:10.1.11]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.11.jar:10.1.11]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.11.jar:10.1.11]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.11.jar:10.1.11]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.11.jar:10.1.11]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.11.jar:10.1.11]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.11.jar:10.1.11]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.11.jar:10.1.11]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.11.jar:10.1.11]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-08-28T13:09:26.340+05:30 DEBUG 17312 --- [http-nio-8888-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /error?pageNumber=0&pageSize=6
+2023-08-28T13:09:26.341+05:30 DEBUG 17312 --- [http-nio-8888-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-08-28T13:09:26.348+05:30 DEBUG 17312 --- [http-nio-8888-exec-10] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using And [Not [RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@5ad2fb7a, matchingMediaTypes=[application/xhtml+xml, image/*, text/html, text/plain], useEquals=false, ignoredMediaTypes=[*/*]]]
+2023-08-28T13:09:26.350+05:30 DEBUG 17312 --- [http-nio-8888-exec-10] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using Or [RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest], And [Not [MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@5ad2fb7a, matchingMediaTypes=[text/html], useEquals=false, ignoredMediaTypes=[]]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@5ad2fb7a, matchingMediaTypes=[application/atom+xml, application/x-www-form-urlencoded, application/json, application/octet-stream, application/xml, multipart/form-data, text/xml], useEquals=false, ignoredMediaTypes=[*/*]]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@5ad2fb7a, matchingMediaTypes=[*/*], useEquals=true, ignoredMediaTypes=[]]]
+2023-08-28T13:09:26.352+05:30 DEBUG 17312 --- [http-nio-8888-exec-10] s.w.a.DelegatingAuthenticationEntryPoint : Match found! Executing org.springframework.security.web.authentication.DelegatingAuthenticationEntryPoint@5d78a156
+2023-08-28T13:09:26.352+05:30 DEBUG 17312 --- [http-nio-8888-exec-10] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2023-08-28T13:09:26.352+05:30 DEBUG 17312 --- [http-nio-8888-exec-10] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@781f53f8
+2023-08-28T13:10:36.111+05:30 DEBUG 17312 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /customers/registerCustomer
+2023-08-28T13:10:36.117+05:30 DEBUG 17312 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /customers/registerCustomer
+2023-08-28T13:10:36.119+05:30 DEBUG 17312 --- [http-nio-8888-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-08-28T13:10:36.120+05:30 DEBUG 17312 --- [http-nio-8888-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /customers/registerCustomer
+2023-08-28T13:10:36.233+05:30  INFO 17312 --- [http-nio-8888-exec-2] com.masai.service.CustomerServiceImpl    : Customer is saved sucessfully
+2023-08-28T13:11:07.571+05:30 DEBUG 17312 --- [http-nio-8888-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /customers/signin
+2023-08-28T13:11:07.583+05:30 DEBUG 17312 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /customers/signin
+2023-08-28T13:11:07.702+05:30 DEBUG 17312 --- [http-nio-8888-exec-6] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-08-28T13:11:07.702+05:30 DEBUG 17312 --- [http-nio-8888-exec-6] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=newC@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2023-08-28T13:11:07.705+05:30 DEBUG 17312 --- [http-nio-8888-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /customers/signin
+2023-08-28T13:12:37.845+05:30 DEBUG 17312 --- [http-nio-8888-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /customers/signin
+2023-08-28T13:12:37.849+05:30 DEBUG 17312 --- [http-nio-8888-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /customers/signin
+2023-08-28T13:12:37.964+05:30 DEBUG 17312 --- [http-nio-8888-exec-8] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-08-28T13:12:37.966+05:30 DEBUG 17312 --- [http-nio-8888-exec-8] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=newC@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2023-08-28T13:12:37.967+05:30 DEBUG 17312 --- [http-nio-8888-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /customers/signin
+2023-08-28T13:18:55.251+05:30 DEBUG 17312 --- [http-nio-8888-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /customers/signin
+2023-08-28T13:18:55.255+05:30 DEBUG 17312 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /customers/signin
+2023-08-28T13:18:55.357+05:30 DEBUG 17312 --- [http-nio-8888-exec-3] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-08-28T13:18:55.357+05:30 DEBUG 17312 --- [http-nio-8888-exec-3] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=c1@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2023-08-28T13:18:55.358+05:30 DEBUG 17312 --- [http-nio-8888-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /customers/signin
