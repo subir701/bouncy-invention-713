@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
             
             if (response.ok) {
 
-               
+               console.log(response);
                
                 window.location.href = "admin.html";
                 

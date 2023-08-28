@@ -1,12 +1,12 @@
 let mainHtml = document.getElementById("body");
-
+let btn= document.getElementById("logout");
 function fetchTicketData() {
     const jwtToken = getCookie();
     const apiUrl = 'http://localhost:8888/admin/ticket/getAllTicket';
 
     fetch(apiUrl, {
         headers: {
-            "Authorization": `Bearer ${jwtToken}`
+            "Authorization": `Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJBa2FzaCIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoic3ViQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiUk9MRV9BRE1JTiIsImlhdCI6MTY5MzE5ODgzNSwiZXhwIjoxNjkzMjI4ODM1fQ.lfzC7qvR0kyjTlOx6tIuTZvc4897s0Twt8CujET18e6XP0I-EP5qMbe18k-OIfMtxhh07ihy9MmDS1gnR6aJyw`
         }
     })
     .then(res => {
@@ -16,8 +16,8 @@ function fetchTicketData() {
         return res.json();
     })
     .then(data => {
-        console.log(data); // Log the data array for debugging
-        render(data); // Pass the array to the render function
+        console.log(data); 
+        render(data); 
     })
     .catch(error => {
         console.error('Error fetching ticket data:', error);
@@ -37,7 +37,7 @@ function render(tickets) {
         ticket.personCount
     ));
 
-    mainHtml.innerHTML = cards.join(""); // Join the array of cards into a single string
+    mainHtml.innerHTML = cards.join(""); 
 }
 
 function getCard(username, address, mobile, email, activity, price, visit, createdOn , personCount) {
@@ -60,6 +60,13 @@ function getCookie() {
     const parts = value.split("=");
 
     return parts[1];
+}
+
+btn.addEventListener("click", logout)
+ 
+function logout(){
+    document.cookie = "name=Martin Roy;max-age=0";
+    window.location.href= "adminLogin.html";
 }
 
 fetchTicketData();

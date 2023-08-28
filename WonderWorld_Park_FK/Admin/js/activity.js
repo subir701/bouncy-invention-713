@@ -7,7 +7,7 @@ function fetchActivity() {
 
     fetch('http://localhost:8888/admin/activity/all?pageNumber=0&pageSize=6', {
         headers: {
-            "Authorization": `Bearer ${jwtToken}`
+            "Authorization": `Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJBa2FzaCIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoic3ViQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiUk9MRV9BRE1JTiIsImlhdCI6MTY5MzE5ODgzNSwiZXhwIjoxNjkzMjI4ODM1fQ.lfzC7qvR0kyjTlOx6tIuTZvc4897s0Twt8CujET18e6XP0I-EP5qMbe18k-OIfMtxhh07ihy9MmDS1gnR6aJyw`
         }
     })
     .then(res => {
@@ -68,8 +68,8 @@ function getCard(count,activityName, capacity, distance, price, url,isDeleted,ac
         <td>${price}</td>
         <td>${url}</td>
         <td>${isDeleted}</td>
-        <td><button onclick="deleteActivity(${activityId})">Delete</button></td>
-        <td><button onclick="updateActivity(${activityId})">Update</button></td>
+        <td><button onclick="deleteActivity(${activityId})" class="delete">Delete</button></td>
+        <td><button onclick="updateActivity(${activityId})" class="update">Update</button></td>
     </tr>`;
 
     return card;

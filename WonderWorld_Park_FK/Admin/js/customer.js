@@ -1,12 +1,12 @@
 let mainHtml = document.getElementById("body");
-
+let btn= document.getElementById("logout");
 function fetchCustomerData(){
     const jwtToken = getCookie();
     const apiUrl = 'http://localhost:8888/admin/customers';
     
     fetch(apiUrl, {
         headers: {
-            "Authorization": `Bearer ${jwtToken}`
+            "Authorization": `Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJBa2FzaCIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoic3ViQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiUk9MRV9BRE1JTiIsImlhdCI6MTY5MzE5ODgzNSwiZXhwIjoxNjkzMjI4ODM1fQ.lfzC7qvR0kyjTlOx6tIuTZvc4897s0Twt8CujET18e6XP0I-EP5qMbe18k-OIfMtxhh07ihy9MmDS1gnR6aJyw`
         }
     })
     .then(res => {
@@ -49,7 +49,7 @@ function getCard(customerId, username,address,mobileNumber,email,createdOn,isDel
         <td>${mobileNumber}</td>
         <td>${createdOn}</td>
         <td>${isDeleted}</td>
-        <td><button onclick="deleteCustomer(${customerId})">Delete</button></td>
+        <td><button onclick="deleteCustomer(${customerId})" class="button">Delete</button></td>
     </tr>`;
 }
 
@@ -61,7 +61,7 @@ function deleteCustomer(customerId){
     fetch(apiurl , {
         method: 'DELETE',
         headers: {
-            "authorization": `Bearer ${jwtToken}`
+            "authorization": `Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJBa2FzaCIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoic3ViQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiUk9MRV9BRE1JTiIsImlhdCI6MTY5MzE5ODgzNSwiZXhwIjoxNjkzMjI4ODM1fQ.lfzC7qvR0kyjTlOx6tIuTZvc4897s0Twt8CujET18e6XP0I-EP5qMbe18k-OIfMtxhh07ihy9MmDS1gnR6aJyw`
         }
     })
     .then(res => {
@@ -81,6 +81,13 @@ function getCookie() {
     const parts = value.split("=");
 
     return parts[1];
+}
+
+btn.addEventListener("click", logout)
+ 
+function logout(){
+    document.cookie = "name=Martin Roy;max-age=0";
+    window.location.href= "adminLogin.html";
 }
 
 fetchCustomerData();
