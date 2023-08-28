@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./Style/adminLogin.css" />
+		<title>Admin SignUp</title>
+		<style>
+			/* Reset default margins and paddings */
+			body,
+			h1,
+			h2,
+			p,
+			form {
+				margin: 0;
+				padding: 0;
+			}
+
+			/* Apply a background color to the body */
+			body {
+				background-color: #f2f2f2;
+				font-family: Arial, sans-serif;
+			}
+
+			/* Style the header and navigation */
+			header {
+				background-color: #333;
+				color: white;
+				padding: 10px;
+				text-align: center;
+			}
+
+			/* Center the form within the main section */
+			main {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+			}
+
+			/* Style the form container */
+			#login-form-wrap {
+				background-color: white;
+				border-radius: 10px;
+				padding: 20px;
+				box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+				width: 500px;
+				padding-right: 40px;
+			}
+
+			/* Style the form title */
+			#login-form-wrap h2 {
+				text-align: center;
+				margin-bottom: 20px;
+				color: #333;
+			}
+
+			/* Style the form inputs */
+			#login-form p {
+				margin-bottom: 15px;
+			}
+
+			#login-form input[type='text'],
+			#login-form input[type='email'],
+			#login-form input[type='password'] {
+				width: 100%;
+				padding: 10px;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+			}
+
+			/* Style the submit button */
+			#submit {
+				display: block;
+				margin: auto;
+				background-color: blue;
+				color: white;
+				border: none;
+				border-radius: 5px;
+				padding: 10px 20px;
+				cursor: pointer;
+			}
+
+			#submit:hover {
+				background-color: darkblue;
+				transform: scale(1.05);
+			}
+
+			#submit {
+				display: flex;
+				color: white;
+				width: 78%;
+				margin: auto;
+				background-color: blue;
+				margin-top: 30px;
+				height: 20px;
+				justify-content: center;
+				align-items: center;
+				padding: 23px;
+				border: none;
+				cursor: pointer;
+			}
+
+			#submit:hover {
+				transform: scale(0.9);
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav id="main__nav"></nav>
+		</header>
+		<main>
+			<!-- partial:index.partial.html -->
+			<div id="login-form-wrap">
+				<h2>Customer SignUp</h2>
+				<form id="login-form">
+					<p>
+						<input
+							type="text"
+							id="username"
+							name="name"
+							placeholder="Name"
+							required
+						/><i class="validation"><span></span><span></span></i>
+					</p>
+
+					<p>
+						<input
+							type="email"
+							id="email"
+							name="email"
+							placeholder="Email Address"
+							required
+						/><i class="validation"><span></span><span></span></i>
+					</p>
+
+					<p>
+						<input
+							type="password"
+							id="password"
+							name="password"
+							placeholder="Password"
+							required
+						/><i class="validation"><span></span><span></span></i>
+					</p>
+
+					<p>
+						<input
+							type="text"
+							id="mobile"
+							name="mobile"
+							placeholder="Mobile No."
+							required
+						/><i class="validation"><span></span><span></span></i>
+					</p>
+
+					<p>
+						<input
+							type="text"
+							id="Address"
+							name="address"
+							placeholder="Address"
+							required
+						/><i class="validation"><span></span><span></span></i>
+					</p>
+
+					<p>
+						<!-- <input type="submit" id="login" value="SignUp">  -->
+						<button id="submit">SUBMIT</button>
+					</p>
+				</form>
+			</div>
+			<!--login-form-wrap-->
+			<!-- partial -->
+		</main>
+		<script src="./js/customerRegister.js"></script>
+	</body>
+</html>

@@ -11,7 +11,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,15 +29,12 @@ import com.masai.model.Activity;
 import com.masai.model.Admin;
 import com.masai.model.Customer;
 import com.masai.model.Ticket;
-import com.masai.repository.AdminRepository;
-import com.masai.security.JwtToken;
 import com.masai.service.ActivityService;
 import com.masai.service.AdminService;
 import com.masai.service.CustomerService;
 import com.masai.service.TicketService;
 
 import jakarta.validation.Valid;
-import lombok.extern.slf4j.Slf4j;
 
 
 @RestController
