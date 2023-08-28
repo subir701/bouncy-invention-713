@@ -38,7 +38,6 @@
     font-size: 24px;
     font-weight: bold;
     padding-top: 3.5px;
-    text-shadow: 2px 2px 4px black;
 }
 
 .logo img {
@@ -148,6 +147,225 @@
 
 
 
+/* for slider */
+/* popular things */
+
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+
+#Second_Menu {
+    width: 80%;
+    margin: auto;
+    margin-top: 40px
+}
+
+
+#popular {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-size: 45px;
+    letter-spacing: 2px;
+    margin: 20px;
+}
+
+
+
+.wrapper {
+    display: flex;
+    max-width: 1200px;
+    position: relative;
+}
+
+.wrapper i {
+    top: 50%;
+    height: 44px;
+    width: 44px;
+    color: #343F4F;
+    cursor: pointer;
+    font-size: 1.15rem;
+    position: absolute;
+    text-align: center;
+    line-height: 44px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+
+.wrapper i:active {
+    transform: translateY(-50%) scale(0.9);
+}
+
+.wrapper i:hover {
+    background: #f2f2f2;
+}
+
+.wrapper i:first-child {
+    left: -22px;
+    display: none;
+}
+
+.wrapper i:last-child {
+    right: -22px;
+}
+
+.wrapper .carousel {
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+.carousel.dragging {
+    cursor: grab;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging div {
+    pointer-events: none;
+}
+
+.carousel div {
+    object-fit: cover;
+    user-select: none;
+    margin-left: 14px;
+    width: calc(100% / 3);
+}
+
+.carousel div img {
+    height: 250px;
+
+}
+
+.carousel div h1 {
+    font-size: 26px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carousel div:first-child {
+    margin-left: 0px;
+}
+
+@media screen and (max-width: 900px) {
+    .carousel img {
+        width: calc(100% / 2);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .carousel img {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+/* footer */
+
+#mid-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-left: 76px;
+    margin-right: 76px;
+}
+
+#mid-footer img {
+    height: 30px;
+    margin-top: 40PX;
+    margin-right: 10px;
+}
+
+
+#main-footer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    margin-top: 50px;
+
+}
+
+#icons {
+    margin-top: 10px;
+    padding-bottom: 50px;
+}
+
+#icons img {
+    padding-left: 1px;
+}
+
+#footer-search input {
+    width: 200px;
+    height: 45px;
+    padding: 14px;
+    border: none;
+    border-bottom: 1px solid rgb(113, 188, 228);
+    font-size: 14px;
+}
+
+#footer p {
+    color: black;
+    letter-spacing: 1px;
+}
+
+#main-footer #footer-btn {
+    width: 100px;
+    height: 45px;
+    color: black;
+    border: none;
+    background-color: rgb(113, 188, 228);
+    ;
+    font-size: 14px;
+}
+
+#main-footer img {
+    width: 20px;
+}
+
+#main-footer p {
+    color: black;
+    font-size: 15px;
+    line-height: 1.3pc;
+}
+
+#main-footer h3 {
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 3.5px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+}
+
+
+#main-footer #footer-btn2 {
+    width: 150px;
+    height: 30px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: #7ba1cd;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+#main-footer #footer-btn2:hover {
+    background-color: #3a77be;
+}
+
+
+
 
 /* back-to-top button */
 
@@ -175,3 +393,5 @@
 #back-to-topbtn:hover {
     background-color: #eee;
 }
+
+
