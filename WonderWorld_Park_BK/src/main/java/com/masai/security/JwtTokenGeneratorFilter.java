@@ -48,7 +48,7 @@ public class JwtTokenGeneratorFilter extends OncePerRequestFilter {
             Cookie jwtCookie = new Cookie(SecurityConstants.JWT_HEADER, jwt); // Replace jwt with your actual JWT token
             jwtCookie.setMaxAge((int) (System.currentTimeMillis() + 30000000)); // Set cookie expiration time
             jwtCookie.setPath("/");
-            
+            jwtCookie.setHttpOnly(true);
             response.addCookie(jwtCookie);
  
         }
